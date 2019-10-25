@@ -2,6 +2,7 @@ package debug
 
 import (
 	"fmt"
+	"github.com/kr/pretty"
 )
 
 var active = true
@@ -12,7 +13,7 @@ func Print(vals ...interface{}) {
 		return
 	}
 	for _, v := range vals {
-		fmt.Printf("%#v\n", v)
+		pretty.Print(v)
 	}
 }
 
