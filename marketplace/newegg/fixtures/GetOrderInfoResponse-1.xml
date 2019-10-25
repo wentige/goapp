@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NeweggAPIResponse>
+  <IsSuccess>true</IsSuccess>
+  <OperationType>GetOrderInfoResponse</OperationType>
+  <SellerID>AD6H</SellerID>
+  <ResponseBody>
+    <PageInfo>
+      <TotalCount>1</TotalCount>
+      <TotalPageCount>1</TotalPageCount>
+      <PageIndex>1</PageIndex>
+      <PageSize>100</PageSize>
+    </PageInfo>
+    <OrderInfoList>
+      <OrderInfo>
+        <SellerOrderNumber/>
+        <SellerID>AD6H</SellerID>
+        <OrderNumber>274286889</OrderNumber>
+        <InvoiceNumber>172607308</InvoiceNumber>
+        <OrderDownloaded>true</OrderDownloaded>
+        <OrderDate>10/07/2019 04:56:11</OrderDate>
+        <OrderStatus>3</OrderStatus>
+        <OrderStatusDescription>Invoiced</OrderStatusDescription>
+        <CustomerName><![CDATA[George Rodgers]]></CustomerName>
+        <CustomerPhoneNumber>626-271-9700</CustomerPhoneNumber>
+        <CustomerEmailAddress>cusa.q6cw1a7ers0t9iqm@marketplace.newegg.com</CustomerEmailAddress>
+        <ShipToAddress1><![CDATA[18045 Rowland Street]]></ShipToAddress1>
+        <ShipToAddress2/>
+        <ShipToCityName>City of Industry</ShipToCityName>
+        <ShipToStateCode>CA</ShipToStateCode>
+        <ShipToZipCode>91748</ShipToZipCode>
+        <ShipToCountryCode>UNITED STATES</ShipToCountryCode>
+        <ShipService>Expedited Shipping (3-5 business days)</ShipService>
+        <ShipToFirstName><![CDATA[George]]></ShipToFirstName>
+        <ShipToLastName><![CDATA[ Rodgers]]></ShipToLastName>
+        <ShipToCompany><![CDATA[NISP08 SO 274286889]]></ShipToCompany>
+        <OrderItemAmount>240.75</OrderItemAmount>
+        <ShippingAmount>40.99</ShippingAmount>
+        <DiscountAmount>0.00</DiscountAmount>
+        <RefundAmount>0.00</RefundAmount>
+        <SalesTax>0</SalesTax>
+        <VATTotal>0</VATTotal>
+        <DutyTotal>0</DutyTotal>
+        <OrderTotalAmount>281.74</OrderTotalAmount>
+        <OrderQty>2</OrderQty>
+        <IsAutoVoid>false</IsAutoVoid>
+        <SalesChannel>0</SalesChannel>
+        <FulfillmentOption>0</FulfillmentOption>
+        <ItemInfoList>
+          <ItemInfo>
+            <SellerPartNumber><![CDATA[ING-48298N]]></SellerPartNumber>
+            <NeweggItemNumber>9SIAD6H9VM3155</NeweggItemNumber>
+            <MfrPartNumber><![CDATA[SPA303-G1]]></MfrPartNumber>
+            <UPCCode>0882658345371</UPCCode>
+            <Description><![CDATA[Cisco SPA 303 3-Line IP Phone with Display]]></Description>
+            <OrderedQty>1</OrderedQty>
+            <ShippedQty>1</ShippedQty>
+            <UnitPrice>120.33</UnitPrice>
+            <ExtendUnitPrice>120.33</ExtendUnitPrice>
+            <ExtendShippingCharge>15.12</ExtendShippingCharge>
+            <ExtendSalesTax>0</ExtendSalesTax>
+            <ExtendVAT>0</ExtendVAT>
+            <ExtendDuty>0</ExtendDuty>
+            <Status>2</Status>
+            <StatusDescription>Shipped</StatusDescription>
+          </ItemInfo>
+          <ItemInfo>
+            <SellerPartNumber><![CDATA[DH-SPA303G1CN]]></SellerPartNumber>
+            <NeweggItemNumber>9SIAD6H5EE8549</NeweggItemNumber>
+            <MfrPartNumber><![CDATA[SPA303-G1]]></MfrPartNumber>
+            <UPCCode>882658345371</UPCCode>
+            <Description><![CDATA[Cisco Small Business SPA303-G1 3-Line IP Phone]]></Description>
+            <OrderedQty>1</OrderedQty>
+            <ShippedQty>1</ShippedQty>
+            <UnitPrice>120.42</UnitPrice>
+            <ExtendUnitPrice>120.42</ExtendUnitPrice>
+            <ExtendShippingCharge>25.87</ExtendShippingCharge>
+            <ExtendSalesTax>0</ExtendSalesTax>
+            <ExtendVAT>0</ExtendVAT>
+            <ExtendDuty>0</ExtendDuty>
+            <Status>2</Status>
+            <StatusDescription>Shipped</StatusDescription>
+          </ItemInfo>
+        </ItemInfoList>
+        <PackageInfoList>
+          <PackageInfo>
+            <PackageType>Shipped</PackageType>
+            <ShipCarrier>UPS</ShipCarrier>
+            <ShipService>Expedited Shipping (3-5 business days)</ShipService>
+            <TrackingNumber>1Z37Y0596767691812</TrackingNumber>
+            <ShipDate>10/08/2019 12:13:03</ShipDate>
+            <ItemInfoList>
+              <ItemInfo>
+                <SellerPartNumber><![CDATA[ING-48298N]]></SellerPartNumber>
+                <MfrPartNumber><![CDATA[SPA303-G1]]></MfrPartNumber>
+                <ShippedQty>1</ShippedQty>
+              </ItemInfo>
+              <ItemInfo>
+                <SellerPartNumber><![CDATA[DH-SPA303G1CN]]></SellerPartNumber>
+                <MfrPartNumber><![CDATA[SPA303-G1]]></MfrPartNumber>
+                <ShippedQty>1</ShippedQty>
+              </ItemInfo>
+            </ItemInfoList>
+          </PackageInfo>
+        </PackageInfoList>
+      </OrderInfo>
+    </OrderInfoList>
+  </ResponseBody>
+  <ResponseDate>10/10/2019 08:54:12</ResponseDate>
+  <Memo/>
+</NeweggAPIResponse>
