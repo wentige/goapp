@@ -1,0 +1,1177 @@
+<?xml version="1.0"?>
+<GetCompetitivePricingForSKUResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-100173" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B003BIEOCI</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-100173</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>69.99</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>69.99</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">15</OfferListingCount>
+          <OfferListingCount condition="Any">15</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>27199</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1236022011</ProductCategoryId>
+          <Rank>121</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-102040" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B003ELVLKU</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-102040</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>18.97</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>18.97</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+          <CompetitivePrice belongsToRequester="false" condition="Used" subcondition="VeryGood">
+            <CompetitivePriceId>2</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>17.64</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>17.64</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">15</OfferListingCount>
+          <OfferListingCount condition="Used">1</OfferListingCount>
+          <OfferListingCount condition="Any">16</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>1034</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>680461011</ProductCategoryId>
+          <Rank>14</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2404990011</ProductCategoryId>
+          <Rank>620</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-105177" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B00427TAIK</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-105177</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>112.23</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>112.23</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+          <CompetitivePrice belongsToRequester="false" condition="Used" subcondition="Mint">
+            <CompetitivePriceId>2</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>83.43</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>69.99</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>13.44</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">29</OfferListingCount>
+          <OfferListingCount condition="Used">1</OfferListingCount>
+          <OfferListingCount condition="Any">30</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>10794</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>680462011</ProductCategoryId>
+          <Rank>139</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2404990011</ProductCategoryId>
+          <Rank>5971</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>3379553011</ProductCategoryId>
+          <Rank>6102</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-105179" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B00427OTEU</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-105179</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>124.66</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>124.66</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+          <CompetitivePrice belongsToRequester="false" condition="Used" subcondition="Mint">
+            <CompetitivePriceId>2</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>105.00</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>105.00</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">37</OfferListingCount>
+          <OfferListingCount condition="Used">1</OfferListingCount>
+          <OfferListingCount condition="Any">38</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>38333</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>680462011</ProductCategoryId>
+          <Rank>315</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2404990011</ProductCategoryId>
+          <Rank>20032</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>3379553011</ProductCategoryId>
+          <Rank>20294</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-105318" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B0043T7FHK</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-105318</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>179.99</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>179.99</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">41</OfferListingCount>
+          <OfferListingCount condition="Any">41</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>10882</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>677246011</ProductCategoryId>
+          <Rank>63</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233055011</ProductCategoryId>
+          <Rank>375</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-105754" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B004AGXHMI</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-105754</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>21.38</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>21.38</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">11</OfferListingCount>
+          <OfferListingCount condition="Any">11</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>173045</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>7204533011</ProductCategoryId>
+          <Rank>394</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-106465" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B004BQKQ8A</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-106465</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>67.36</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>67.36</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">1</OfferListingCount>
+          <OfferListingCount condition="Any">1</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>677243011</ProductCategoryId>
+          <Rank>128</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233055011</ProductCategoryId>
+          <Rank>821</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-106601" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B00GW3MBZQ</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-106601</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>32.28</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>32.28</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">6</OfferListingCount>
+          <OfferListingCount condition="Any">6</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>233102</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233052011</ProductCategoryId>
+          <Rank>395</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-109128" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B004GXZ69W</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-109128</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>115.77</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>115.77</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">43</OfferListingCount>
+          <OfferListingCount condition="Any">43</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>54271</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>680462011</ProductCategoryId>
+          <Rank>423</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2404990011</ProductCategoryId>
+          <Rank>28014</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-109673" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B004JUVNVC</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-109673</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>104.98</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>100.03</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>4.95</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">6</OfferListingCount>
+          <OfferListingCount condition="Any">6</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>157970</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1236022011</ProductCategoryId>
+          <Rank>520</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-109866" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B004QY7M3Y</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-109866</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>45.63</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>45.63</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">15</OfferListingCount>
+          <OfferListingCount condition="Any">15</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>56280</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>3312778011</ProductCategoryId>
+          <Rank>23</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2409510011</ProductCategoryId>
+          <Rank>88</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233058011</ProductCategoryId>
+          <Rank>285</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-111405" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B004WYV8Z6</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-111405</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>71.15</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>58.80</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>12.35</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">11</OfferListingCount>
+          <OfferListingCount condition="Refurbished">1</OfferListingCount>
+          <OfferListingCount condition="Any">12</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>99301</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>677243011</ProductCategoryId>
+          <Rank>312</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-111417" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B004X8EO6Q</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-111417</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>65.40</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>65.40</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">11</OfferListingCount>
+          <OfferListingCount condition="Any">11</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>677243011</ProductCategoryId>
+          <Rank>63</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-113258" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B0053GR2YI</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-113258</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>34.99</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>34.99</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">44</OfferListingCount>
+          <OfferListingCount condition="Any">44</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>125943</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2409510011</ProductCategoryId>
+          <Rank>163</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233055011</ProductCategoryId>
+          <Rank>2342</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>677247011</ProductCategoryId>
+          <Rank>2742</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-113742" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B003VAHYNC</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-113742</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>78.64</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>78.64</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+          <CompetitivePrice belongsToRequester="false" condition="Used" subcondition="VeryGood">
+            <CompetitivePriceId>2</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>66.06</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>66.06</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">49</OfferListingCount>
+          <OfferListingCount condition="Used">1</OfferListingCount>
+          <OfferListingCount condition="Refurbished">1</OfferListingCount>
+          <OfferListingCount condition="Any">51</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>1911</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>680463011</ProductCategoryId>
+          <Rank>21</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>680461011</ProductCategoryId>
+          <Rank>25</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233055011</ProductCategoryId>
+          <Rank>121</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-114189" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B005BZNDOO</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-114189</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>139.99</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>139.99</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+          <CompetitivePrice belongsToRequester="false" condition="Used" subcondition="Good">
+            <CompetitivePriceId>2</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>125.99</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>125.99</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">40</OfferListingCount>
+          <OfferListingCount condition="Used">1</OfferListingCount>
+          <OfferListingCount condition="Any">41</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>3894</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>677246011</ProductCategoryId>
+          <Rank>18</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233055011</ProductCategoryId>
+          <Rank>195</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-114250" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B0058FAYQ2</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-114250</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>72.97</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>72.97</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">32</OfferListingCount>
+          <OfferListingCount condition="Any">32</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>1236022011</ProductCategoryId>
+          <Rank>288</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-115343" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B002G1YP3O</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-115343</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>30.76</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>30.76</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">9</OfferListingCount>
+          <OfferListingCount condition="Any">9</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>133734</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>7204529011</ProductCategoryId>
+          <Rank>28</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-116297" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B003VANO7C</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-116297</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>61.62</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>61.62</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+          <CompetitivePrice belongsToRequester="false" condition="Used" subcondition="VeryGood">
+            <CompetitivePriceId>2</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>57.31</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>57.31</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>0.00</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">26</OfferListingCount>
+          <OfferListingCount condition="Used">5</OfferListingCount>
+          <OfferListingCount condition="Refurbished">1</OfferListingCount>
+          <OfferListingCount condition="Any">32</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>680463011</ProductCategoryId>
+          <Rank>10</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1233055011</ProductCategoryId>
+          <Rank>38</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2404990011</ProductCategoryId>
+          <Rank>269</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <GetCompetitivePricingForSKUResult SellerSKU="AS-116786" status="Success">
+    <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <ASIN>B001F0QUWG</ASIN>
+        </MarketplaceASIN>
+        <SKUIdentifier>
+          <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+          <SellerId>A19N3NI8X4F24J</SellerId>
+          <SellerSKU>AS-116786</SellerSKU>
+        </SKUIdentifier>
+      </Identifiers>
+      <CompetitivePricing>
+        <CompetitivePrices>
+          <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+            <CompetitivePriceId>1</CompetitivePriceId>
+            <Price>
+              <LandedPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>32.50</Amount>
+              </LandedPrice>
+              <ListingPrice>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>27.55</Amount>
+              </ListingPrice>
+              <Shipping>
+                <CurrencyCode>CAD</CurrencyCode>
+                <Amount>4.95</Amount>
+              </Shipping>
+            </Price>
+          </CompetitivePrice>
+        </CompetitivePrices>
+        <NumberOfOfferListings>
+          <OfferListingCount condition="New">11</OfferListingCount>
+          <OfferListingCount condition="Any">11</OfferListingCount>
+        </NumberOfOfferListings>
+      </CompetitivePricing>
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>ce_display_on_website</ProductCategoryId>
+          <Rank>138874</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>3341310011</ProductCategoryId>
+          <Rank>320</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>1236019011</ProductCategoryId>
+          <Rank>793</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>17296418011</ProductCategoryId>
+          <Rank>2404</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetCompetitivePricingForSKUResult>
+  <ResponseMetadata>
+    <RequestId>6cd4b9a6-69ee-4e62-88a6-a7a1dcf65ef0</RequestId>
+  </ResponseMetadata>
+</GetCompetitivePricingForSKUResponse>

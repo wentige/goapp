@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<GetOrderResponse xmlns="https://mws.amazonservices.com/Orders/2013-09-01">
+  <GetOrderResult>
+    <Orders>
+      <Order>
+        <LatestShipDate>2019-04-04T06:59:59Z</LatestShipDate>
+        <OrderType>StandardOrder</OrderType>
+        <PurchaseDate>2019-04-01T12:52:22.306Z</PurchaseDate>
+        <AmazonOrderId>112-1568479-4565824</AmazonOrderId>
+        <BuyerEmail>xv779tj949sq68f@marketplace.amazon.com</BuyerEmail>
+        <IsReplacementOrder>false</IsReplacementOrder>
+        <LastUpdateDate>2019-04-02T21:02:54.328Z</LastUpdateDate>
+        <NumberOfItemsShipped>1</NumberOfItemsShipped>
+        <ShipServiceLevel>Econ US Dom</ShipServiceLevel>
+        <OrderStatus>Shipped</OrderStatus>
+        <SalesChannel>Amazon.com</SalesChannel>
+        <ShippedByAmazonTFM>false</ShippedByAmazonTFM>
+        <IsBusinessOrder>false</IsBusinessOrder>
+        <LatestDeliveryDate>2019-04-18T06:59:59Z</LatestDeliveryDate>
+        <NumberOfItemsUnshipped>0</NumberOfItemsUnshipped>
+        <PaymentMethodDetails>
+          <PaymentMethodDetail>Standard</PaymentMethodDetail>
+        </PaymentMethodDetails>
+        <BuyerName>Perdue Farms</BuyerName>
+        <EarliestDeliveryDate>2019-04-09T07:00:00Z</EarliestDeliveryDate>
+        <IsPremiumOrder>false</IsPremiumOrder>
+        <OrderTotal>
+          <CurrencyCode>USD</CurrencyCode>
+          <Amount>118.71</Amount>
+        </OrderTotal>
+        <EarliestShipDate>2019-04-02T07:00:00Z</EarliestShipDate>
+        <MarketplaceId>ATVPDKIKX0DER</MarketplaceId>
+        <FulfillmentChannel>MFN</FulfillmentChannel>
+        <PaymentMethod>Other</PaymentMethod>
+        <ShippingAddress>
+          <City>ACCOMAC</City>
+          <AddressType>Commercial</AddressType>
+          <PostalCode>23301-1420</PostalCode>
+          <isAddressSharingConfidential>false</isAddressSharingConfidential>
+          <StateOrRegion>VA</StateOrRegion>
+          <Phone>7577875222</Phone>
+          <CountryCode>US</CountryCode>
+          <Name>Perdue Farms ATTN: Chris Peele 7359756ACC</Name>
+          <AddressLine1>22520 LANKFORD HWY</AddressLine1>
+        </ShippingAddress>
+        <IsPrime>false</IsPrime>
+        <ShipmentServiceLevelCategory>FreeEconomy</ShipmentServiceLevelCategory>
+      </Order>
+    </Orders>
+  </GetOrderResult>
+  <ResponseMetadata>
+    <RequestId>477805d9-5161-45f5-a4e3-474c760c3350</RequestId>
+  </ResponseMetadata>
+</GetOrderResponse>
