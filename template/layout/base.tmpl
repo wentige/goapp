@@ -1,0 +1,23 @@
+{{define "template/root" -}}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{template "title" .}}</title>
+  {{CSS "css/style.css" }}
+  {{JS "js/script.js" }}
+  {{htmlsafe `<!--[if lt IE 9]>`}}
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  {{htmlsafe `<![endif]-->`}}
+  {{ template "partial/head" . }}
+</head>
+<body>
+  <a href="{{.BaseURI}}"></a>
+  <img src="{{.BaseURI}}asset/img/ninja32.png">
+  {{ template "content" .}}
+  {{ template "partial/foot" .}}
+  {{ template "partial/google-analysis" .}}
+</body>
+</html>
+{{end}}
+{{define "partial/head"}}{{end}}
+{{define "partial/foot"}}{{end}}

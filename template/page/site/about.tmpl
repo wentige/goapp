@@ -1,0 +1,17 @@
+{{define "title"}}Page:Title About{{end}}
+
+{{define "content"}}
+  <!-- GOLANG STRIP ALL HTML COMMENTS -->
+  <!-- YOU WILL NEVER SEE THIS IN FINAL HTML -->
+  {{htmlsafe `<!-- if you really need html comment -->` }}
+  <img src="{{.BaseURI}}asset/resources/top.jpg">
+  <div>
+    <h1>{{template "title" .}}</h1>
+    <p>Hello, {{lowercase .Username}}</p>
+    <p>Hello, {{.Username | uppercase}}</p>
+  </div>
+  {{htmlsafe `<!-- you have to do in this way -->` }}
+{{end}}
+
+<!-- This overwrites partial/foot -->
+{{define "partial/foot"}}<footer></footer>{{end}}

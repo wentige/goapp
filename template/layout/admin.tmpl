@@ -1,0 +1,16 @@
+{{define "template/root" -}}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin {{template "title" .}}</title>
+  {{CSS "css/style.css" }}
+  {{JS "js/script.js" }}
+</head>
+<body>
+  <a href="{{.BaseURI}}">ADMIN</a>
+  <img src="{{.BaseURI}}asset/img/ninja32.png">
+  {{ template "content" .}}
+  {{ template "partial/foot" .}}
+</body>
+</html>
+{{end}}
