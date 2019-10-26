@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<XMLFORMPOST>
+  <REQUEST>price-availability</REQUEST>
+  <LOGIN>
+    <USERID>userid</USERID>
+    <PASSWORD>password</PASSWORD>
+  </LOGIN>
+<PARTNUM>MCUPMP</PARTNUM>
+<PARTNUM>STEB8000100CA</PARTNUM>
+</XMLFORMPOST>

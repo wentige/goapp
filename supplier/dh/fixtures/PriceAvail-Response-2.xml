@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLRESPONSE>
+  <ITEM>
+    <PARTNUM>MCUPMP</PARTNUM>
+    <MESSAGE>Model: MCUPMP has been discontinued and has No stock</MESSAGE>
+  </ITEM>
+  <STATUS>failure</STATUS>
+</XMLRESPONSE>

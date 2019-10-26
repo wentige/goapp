@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLRESPONSE>
+  <ITEM>
+    <PARTNUM>STEB8000100CA</PARTNUM>
+    <UNITPRICE>192.1</UNITPRICE>
+    <BRANCHQTY>
+      <BRANCH>Vancouver</BRANCH>
+      <QTY>160</QTY>
+      <INSTOCKDATE></INSTOCKDATE>
+    </BRANCHQTY>
+    <BRANCHQTY>
+      <BRANCH>Toronto</BRANCH>
+      <QTY>483</QTY>
+      <INSTOCKDATE></INSTOCKDATE>
+    </BRANCHQTY>
+    <TOTALQTY>643</TOTALQTY>
+  </ITEM>
+  <ITEM>
+    <PARTNUM>MCUPMP</PARTNUM>
+    <MESSAGE>Model: MCUPMP has been discontinued and has No stock</MESSAGE>
+  </ITEM>
+  <STATUS>success</STATUS>
+</XMLRESPONSE>
