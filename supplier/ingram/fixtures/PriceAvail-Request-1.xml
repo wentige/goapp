@@ -1,0 +1,14 @@
+ <?xml version="1.0"?>
+ <PNARequest>
+   <Version>2.0</Version>
+   <TransactionHeader>
+     <SenderID>ME</SenderID>
+     <ReceiverID>YOU</ReceiverID>
+     <CountryCode>FT</CountryCode>
+     <LoginID>LoginID</LoginID>
+     <Password>Password</Password>
+     <TransactionID>1</TransactionID>
+   </TransactionHeader>
+   <PNAInformation SKU="1553CK" Quantity=""/>
+   <ShowDetail>2</ShowDetail>
+ </PNARequest>
