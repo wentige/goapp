@@ -11,7 +11,7 @@ import (
 
 var pr = fmt.Println
 
-func Test_PNARequest(t *testing.T) {
+func Test_XmlRequest(t *testing.T) {
 	assert := assert.New(t)
 
 	var x XmlRequest
@@ -38,7 +38,7 @@ func Test_PNARequest(t *testing.T) {
 	assert.Equal(x.Partnums, z.Partnums)
 }
 
-func Test_PNAResponse(t *testing.T) {
+func Test_XmlResponse(t *testing.T) {
 	assert := assert.New(t)
 
 	filename := "fixtures/PriceAvail-Response-1.xml"

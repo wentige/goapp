@@ -7,12 +7,15 @@ import (
 	"io/ioutil"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/html/charset"
 )
 
 var pr = fmt.Println
 
 func Test_PNARequest(t *testing.T) {
+	assert := assert.New(t)
+
 	var x PNARequest
 
 	x.Version = "2.0"
@@ -27,17 +30,14 @@ func Test_PNARequest(t *testing.T) {
 	x.ShowDetail = "2"
 
 	output, err := xml.MarshalIndent(x, "", "  ")
-	if err != nil {
-		t.Error(err)
-	}
+	assert.Nil(err)
+
 	//fmt.Println(string(output))
 
 	var z PNARequest
 
 	err = xml.Unmarshal(output, &z)
-	if err != nil {
-		t.Error(err)
-	}
+	assert.Nil(err)
 
 	if x.Version != z.Version {
 		t.Error("Version not expected")
@@ -57,6 +57,8 @@ func Test_PNARequest(t *testing.T) {
 }
 
 func Test_PNAResponse(t *testing.T) {
+	assert := assert.New(t)
+
 	filename := "fixtures/PriceAvail-Response-1.xml"
 	data := getXML(filename)
 
@@ -66,9 +68,7 @@ func Test_PNAResponse(t *testing.T) {
 	decoder := xml.NewDecoder(reader)
 	decoder.CharsetReader = charset.NewReaderLabel
 	err := decoder.Decode(&x)
-	if err != nil {
-		t.Error(err)
-	}
+	assert.Nil(err)
 
 	// Header
 	if x.Version != "2.0" {
