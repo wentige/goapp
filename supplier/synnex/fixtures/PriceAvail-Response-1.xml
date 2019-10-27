@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<priceResponse>
+  <customerNo>1150897</customerNo>
+  <userName>roi@btxcdn.com</userName>
+  <PriceAvailabilityList>
+    <synnexSKU>5688596</synnexSKU>
+    <mfgPN>STEB8000100</mfgPN>
+    <mfgCode>6790</mfgCode>
+    <status>Active</status>
+    <description>EXPANSION DESKTOP 8TB USB3</description>
+    <GlobalProductStatusCode>Active</GlobalProductStatusCode>
+    <price>203.00</price>
+    <totalQuantity>882</totalQuantity>
+    <AvailabilityByWarehouse>
+      <warehouseInfo>
+        <number>26</number>
+        <zipcode>B3S 1B3</zipcode>
+        <city>Halifax, NS</city>
+        <addr>115 Chain Lake Drive</addr>
+      </warehouseInfo>
+      <qty>6</qty>
+    </AvailabilityByWarehouse>
+    <AvailabilityByWarehouse>
+      <warehouseInfo>
+        <number>29</number>
+        <zipcode>N1H 1B4</zipcode>
+        <city>Guelph, ON</city>
+        <addr>107 Woodlawn Road West</addr>
+      </warehouseInfo>
+      <qty>476</qty>
+    </AvailabilityByWarehouse>
+    <lineNumber>1</lineNumber>
+  </PriceAvailabilityList>
+</priceResponse>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<priceRequest>
+  <customerNo>1150897</customerNo>
+  <userName>user@name.com</userName>
+  <password>pa55w0rd</password>
+  <skuList>
+    <synnexSKU>5688596</synnexSKU>
+    <lineNumber>1</lineNumber>
+  </skuList>
+</priceRequest>
