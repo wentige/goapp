@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE XML_PriceAvailability_Response SYSTEM "XML_PriceAvailability_Response.dtd">
+<XML_PriceAvailability_Response>
+  <Header>
+    <TransSetIDCode>846REC</TransSetIDCode>
+    <TransControlID />
+    <ResponseVersion>1.4</ResponseVersion>
+  </Header>
+  <Detail>
+    <LineInfo>
+      <RefIDQual1>VP</RefIDQual1>
+      <RefID1>1568CA</RefID1>
+      <RefIDQual2>MG</RefIDQual2>
+      <RefID2>3610/DN</RefID2>
+      <RefIDQual4>UP</RefIDQual4>
+      <RefID4>095205972900</RefID4>
+      <ProductDesc>PHASER 3610 LASERPR 47PPM USB ETH</ProductDesc>
+      <PriceIDCode1>CON</PriceIDCode1>
+      <UnitPrice1>$667.70</UnitPrice1>
+      <PriceIDCode2>MSR</PriceIDCode2>
+      <UnitPrice2>$900.00</UnitPrice2>
+      <RequiredEndUserInfo>N</RequiredEndUserInfo>
+      <RequiredLicenseInfo>N</RequiredLicenseInfo>
+      <ProductWeight>35.200</ProductWeight>
+      <ItemStatus>ACTIVE</ItemStatus>
+      <WhseInfo>
+        <IDCode>MISSISSAUGA, ON</IDCode>
+        <WhseCode>A1</WhseCode>
+        <Qty>2</Qty>
+      </WhseInfo>
+      <WhseInfo>
+        <IDCode>RICHMOND, BC</IDCode>
+        <WhseCode>A2</WhseCode>
+        <Qty>0</Qty>
+      </WhseInfo>
+    </LineInfo>
+  </Detail>
+  <Summary>
+    <NbrOfSegments>5</NbrOfSegments>
+  </Summary>
+</XML_PriceAvailability_Response>

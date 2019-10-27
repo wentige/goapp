@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<XML_PriceAvailability_Submit>
+  <Header>
+    <UserName>567861</UserName>
+    <Password>btexml9014</Password>
+    <ResponseVersion>1.4</ResponseVersion>
+  </Header>
+  <Detail>
+    <LineInfo>
+      <RefIDQual>VP</RefIDQual>
+      <RefID>1568CA</RefID>
+    </LineInfo>
+  </Detail>
+</XML_PriceAvailability_Submit>
