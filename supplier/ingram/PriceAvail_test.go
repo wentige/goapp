@@ -39,21 +39,11 @@ func Test_PNARequest(t *testing.T) {
 	err = xml.Unmarshal(output, &z)
 	assert.Nil(err)
 
-	if x.Version != z.Version {
-		t.Error("Version not expected")
-	}
-	if x.Header.SenderID != z.Header.SenderID {
-		t.Error("Header.SenderID not expected")
-	}
-	if x.Header.LoginID != z.Header.LoginID {
-		t.Error("Header.LoginID not expected")
-	}
-	if x.Info.SKU != z.Info.SKU {
-		t.Error("Info.SKU not expected")
-	}
-	if x.Info.Qty != z.Info.Qty {
-		t.Error("Info.Qty not expected")
-	}
+	assert.Equal(x.Version, z.Version)
+	assert.Equal(x.Header.SenderID, z.Header.SenderID)
+	assert.Equal(x.Header.LoginID, z.Header.LoginID)
+	assert.Equal(x.Info.SKU, z.Info.SKU)
+	assert.Equal(x.Info.Qty, z.Info.Qty)
 }
 
 func Test_PNAResponse(t *testing.T) {
@@ -71,48 +61,23 @@ func Test_PNAResponse(t *testing.T) {
 	assert.Nil(err)
 
 	// Header
-	if x.Version != "2.0" {
-		t.Error("Version not expected")
-	}
-	if x.Header.SenderID != "YOU" {
-		t.Error("Header.SenderID not expected")
-	}
+	assert.Equal(x.Version, "2.0")
+	assert.Equal(x.Header.SenderID, "YOU")
 
 	// Item
-	if x.Item.SKU != "1553CK" {
-		t.Error("Item.SKU not expected")
-	}
-	if x.Item.Qty != "1" {
-		t.Error("Item.Qty not expected")
-	}
-	if x.Item.UPC != "0763649064979" {
-		t.Error("Item.UPC not expected")
-	}
+	assert.Equal(x.Item.SKU, "1553CK")
+	assert.Equal(x.Item.Qty, "1")
+	assert.Equal(x.Item.UPC, "0763649064979")
 
 	// Branch
-	if len(x.Item.Branches) != 2 {
-		t.Error("Item.Branches[] not expected")
-	}
+	assert.Equal(len(x.Item.Branches), 2)
+	assert.Equal(x.Item.Branches[0].ID, "10")
+	assert.Equal(x.Item.Branches[0].Name, "Vancouver")
+	assert.Equal(x.Item.Branches[0].Availability, "142")
 
-	if x.Item.Branches[0].ID != "10" {
-		t.Error("Item.Branches[0].ID not expected")
-	}
-	if x.Item.Branches[0].Name != "Vancouver" {
-		t.Error("Item.Branches[0].Name not expected")
-	}
-	if x.Item.Branches[0].Availability != "142" {
-		t.Error("Item.Branches[0].Avail not expected")
-	}
-
-	if x.Item.Branches[1].ID != "40" {
-		t.Error("Item.Branches[1].ID not expected")
-	}
-	if x.Item.Branches[1].Name != "Toronto" {
-		t.Error("Item.Branches[1].Name not expected")
-	}
-	if x.Item.Branches[1].Availability != "399" {
-		t.Error("Item.Branches[1].Avail not expected")
-	}
+	assert.Equal(x.Item.Branches[1].ID, "40")
+	assert.Equal(x.Item.Branches[1].Name, "Toronto")
+	assert.Equal(x.Item.Branches[1].Availability, "399")
 }
 
 func Test_Errors(t *testing.T) {
