@@ -7,12 +7,15 @@ import (
 	"testing"
 
 	"github.com/kr/pretty"
+	"github.com/stretchr/testify/assert"
 )
 
 var pr = fmt.Println
 var ppr = pretty.Print
 
 func Test_GetOrderInfoResponse(t *testing.T) {
+	assert := assert.New(t)
+
 	filename := "fixtures/GetOrderInfoResponse-1.xml"
 	bytes := getXML(filename)
 
@@ -23,66 +26,38 @@ func Test_GetOrderInfoResponse(t *testing.T) {
 	// check pageInfo
 	pageInfo := resp.ResponseBody.PageInfo
 
-	if pageInfo.TotalCount != "1" {
-		t.Error("TotalCount not expected")
-	}
-	if pageInfo.TotalPageCount != "1" {
-		t.Error("TotalPageCount not expected")
-	}
-	if pageInfo.PageIndex != "1" {
-		t.Error("PageIndex not expected")
-	}
-	if pageInfo.PageSize != "100" {
-		t.Error("PageSize not expected")
-	}
+	assert.Equal(pageInfo.TotalCount, "1")
+	assert.Equal(pageInfo.TotalPageCount, "1")
+	assert.Equal(pageInfo.PageIndex, "1")
+	assert.Equal(pageInfo.PageSize, "100")
 
 	// check orderInfo
 	orderInfo := resp.ResponseBody.OrderInfoList.OrderInfo
 
-	if orderInfo.SellerID != "AD6H" {
-		t.Error("SellerID not expected")
-	}
-	if orderInfo.OrderNumber != "274286889" {
-		t.Error("OrderNumber not expected")
-	}
+	assert.Equal(orderInfo.SellerID, "AD6H")
+	assert.Equal(orderInfo.OrderNumber, "274286889")
 
 	// check itemInfo
 	itemInfo := orderInfo.ItemInfoList.ItemInfo
 
-	if len(itemInfo) != 2 {
-		t.Error("ItemInfo[] not expected")
-	}
-	if itemInfo[0].UPCCode != "0882658345371" {
-		t.Error("UPCCode-0 not expected")
-	}
-	if itemInfo[0].SellerPartNumber != "ING-48298N" {
-		t.Error("SellerPartNumber-0 not expected")
-	}
-	if itemInfo[1].UPCCode != "882658345371" {
-		t.Error("UPCCode-1 not expected")
-	}
-	if itemInfo[1].SellerPartNumber != "DH-SPA303G1CN" {
-		t.Error("SellerPartNumber-0 not expected")
-	}
+	assert.Equal(len(itemInfo), 2)
+	assert.Equal(itemInfo[0].UPCCode, "0882658345371")
+	assert.Equal(itemInfo[0].SellerPartNumber, "ING-48298N")
+	assert.Equal(itemInfo[1].UPCCode, "882658345371")
+	assert.Equal(itemInfo[1].SellerPartNumber, "DH-SPA303G1CN")
 
 	// check packageInfo
 	packageInfo := orderInfo.PackageInfoList.PackageInfo
 
-	if len(packageInfo) != 1 {
-		t.Error("PackageInfo[] not expected")
-	}
-	if packageInfo[0].PackageType != "Shipped" {
-		t.Error("PackageType not expected")
-	}
-	if packageInfo[0].ShipCarrier != "UPS" {
-		t.Error("ShipCarrier not expected")
-	}
-	if packageInfo[0].TrackingNumber != "1Z37Y0596767691812" {
-		t.Error("TrackingNumber not expected")
-	}
+	assert.Equal(len(packageInfo), 1)
+	assert.Equal(packageInfo[0].PackageType, "Shipped")
+	assert.Equal(packageInfo[0].ShipCarrier, "UPS")
+	assert.Equal(packageInfo[0].TrackingNumber, "1Z37Y0596767691812")
 }
 
 func Test_Errors(t *testing.T) {
+	assert := assert.New(t)
+
 	filename := "fixtures/Errors.xml"
 	bytes := getXML(filename)
 
@@ -90,12 +65,8 @@ func Test_Errors(t *testing.T) {
 	xml.Unmarshal(bytes, &resp)
 	//ppr(resp)
 
-	if resp.Error[0].Code != "InvalidToken" {
-		t.Error("Error Code not expected")
-	}
-	if resp.Error[0].Message != "The provided secret key is null." {
-		t.Error("Error Message not expected")
-	}
+	assert.Equal(resp.Error[0].Code, "InvalidToken")
+	assert.Equal(resp.Error[0].Message, "The provided secret key is null.")
 }
 
 func getXML(filename string) []byte {
