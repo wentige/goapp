@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ASIInventory request="07/03/2019 14:08" excute="628">
+  <error>
+    <code>101</code>
+    <message>No inventory found</message>
+  </error>
+</ASIInventory>

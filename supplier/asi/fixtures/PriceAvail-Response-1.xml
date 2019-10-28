@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ASIInventory request="07/03/2019 14:10" excute="704">
+  <Inventory SKU="209435">
+    <ItemId>TS-431XEU-2G-US</ItemId>
+    <Description><![CDATA[QNAP Network Attached Storage TS-431XeU-2G-US ARM Cortex-A15 Quad Core 1.7GHz 2GB DDR3 1x10GbE SFP+ Retail]]></Description>
+    <Vendor>QNAP Systems Inc.</Vendor>
+    <Category>NT</Category>
+    <SubCategory>152</SubCategory>
+    <UPC>885022014033</UPC>
+    <Price>678.46</Price>
+    <Rebate><![CDATA[none]]></Rebate>
+    <Term>none</Term>
+    <Weight>29</Weight>
+    <Status>ACTIVE</Status>
+    <Qty>
+      <Branch Code="2216" Name="Toronto">2</Branch>
+      <Branch Code="3116" Name="Vancouver">1</Branch>
+    </Qty>
+  </Inventory>
+</ASIInventory>
