@@ -31,7 +31,7 @@ func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	return pa.Query(skus)
 }
 
-func (c *Client) Purchase(items []model.PurchaseItem) *model.PurchaseResult {
+func (c *Client) Purchase(item map[string]string) *model.PurchaseResult {
 	po := &PurchaseOrder{c}
-	return po.Perform(items)
+	return po.Perform(item)
 }
