@@ -7,6 +7,7 @@ import (
 	"log"
 	"myapp/supplier/model"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -15,7 +16,7 @@ const PA_URL = "https://www.asipartner.com/partneraccess/xml/price.asp"
 func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	cid := c.Username
 	cert := c.Password
-	sku := skus[0] // one SKU per request
+	sku := strings.TrimPrefix(skus[0], "AS-") // one SKU per request
 
 	// build URL
 	param := fmt.Sprintf("?CID=%s&CERT=%s&SKU=%s", cid, cert, sku)
