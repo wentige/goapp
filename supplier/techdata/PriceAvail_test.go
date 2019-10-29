@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -20,8 +21,7 @@ func Test_Request(t *testing.T) {
 	x.Header.Version = "567861"
 	x.Header.Username = "btexml9014"
 	x.Header.Password = "1.4"
-	x.Detail.LineInfo.RefIDQual = "VP"
-	x.Detail.LineInfo.RefID = "1568CA"
+	x.Detail.LineInfo = append(x.Detail.LineInfo, RequestLineInfo{"VP", "1568CA"})
 
 	output, err := xml.MarshalIndent(x, "", "  ")
 	assert.Nil(err)
@@ -37,8 +37,8 @@ func Test_Request(t *testing.T) {
 	assert.Equal(x.Header.Username, z.Header.Username)
 	assert.Equal(x.Header.Password, z.Header.Password)
 
-	assert.Equal(x.Detail.LineInfo.RefIDQual, z.Detail.LineInfo.RefIDQual)
-	assert.Equal(x.Detail.LineInfo.RefID, z.Detail.LineInfo.RefID)
+	assert.Equal(x.Detail.LineInfo[0].RefIDQual, z.Detail.LineInfo[0].RefIDQual)
+	assert.Equal(x.Detail.LineInfo[0].RefID, z.Detail.LineInfo[0].RefID)
 }
 
 func Test_Response(t *testing.T) {
@@ -55,27 +55,27 @@ func Test_Response(t *testing.T) {
 	assert.Equal(x.Header.TransSetIDCode, "846REC")
 	assert.Equal(x.Header.ResponseVersion, "1.4")
 
-	assert.Equal(x.Detail.LineInfo.RefIDQual1, "VP")
-	assert.Equal(x.Detail.LineInfo.RefID1, "1568CA")
-	assert.Equal(x.Detail.LineInfo.RefIDQual2, "MG")
-	assert.Equal(x.Detail.LineInfo.RefID2, "3610/DN")
-	assert.Equal(x.Detail.LineInfo.RefIDQual4, "UP")
-	assert.Equal(x.Detail.LineInfo.RefID4, "095205972900")
-	assert.Equal(x.Detail.LineInfo.ItemStatus, "ACTIVE")
-	assert.Equal(x.Detail.LineInfo.ProductDesc, "PHASER 3610 LASERPR 47PPM USB ETH")
-	assert.Equal(x.Detail.LineInfo.ProductWeight, "35.200")
-	assert.Equal(x.Detail.LineInfo.EndUserInfo, "N")
-	assert.Equal(x.Detail.LineInfo.LicenseInfo, "N")
+	assert.Equal(x.Detail.LineInfo[0].RefIDQual1, "VP")
+	assert.Equal(x.Detail.LineInfo[0].RefID1, "1568CA")
+	assert.Equal(x.Detail.LineInfo[0].RefIDQual2, "MG")
+	assert.Equal(x.Detail.LineInfo[0].RefID2, "3610/DN")
+	assert.Equal(x.Detail.LineInfo[0].RefIDQual4, "UP")
+	assert.Equal(x.Detail.LineInfo[0].RefID4, "095205972900")
+	assert.Equal(x.Detail.LineInfo[0].ItemStatus, "ACTIVE")
+	assert.Equal(x.Detail.LineInfo[0].ProductDesc, "PHASER 3610 LASERPR 47PPM USB ETH")
+	assert.Equal(x.Detail.LineInfo[0].ProductWeight, "35.200")
+	assert.Equal(x.Detail.LineInfo[0].EndUserInfo, "N")
+	assert.Equal(x.Detail.LineInfo[0].LicenseInfo, "N")
 
-	assert.Equal(len(x.Detail.LineInfo.Warehouses), 2)
+	assert.Equal(len(x.Detail.LineInfo[0].Warehouses), 2)
 
-	assert.Equal(x.Detail.LineInfo.Warehouses[0].Name, "MISSISSAUGA, ON")
-	assert.Equal(x.Detail.LineInfo.Warehouses[0].Code, "A1")
-	assert.Equal(x.Detail.LineInfo.Warehouses[0].Qty, "2")
+	assert.Equal(x.Detail.LineInfo[0].Warehouses[0].Name, "MISSISSAUGA, ON")
+	assert.Equal(x.Detail.LineInfo[0].Warehouses[0].Code, "A1")
+	assert.Equal(x.Detail.LineInfo[0].Warehouses[0].Qty, "2")
 
-	assert.Equal(x.Detail.LineInfo.Warehouses[1].Name, "RICHMOND, BC")
-	assert.Equal(x.Detail.LineInfo.Warehouses[1].Code, "A2")
-	assert.Equal(x.Detail.LineInfo.Warehouses[1].Qty, "0")
+	assert.Equal(x.Detail.LineInfo[0].Warehouses[1].Name, "RICHMOND, BC")
+	assert.Equal(x.Detail.LineInfo[0].Warehouses[1].Code, "A2")
+	assert.Equal(x.Detail.LineInfo[0].Warehouses[1].Qty, "0")
 }
 
 func Test_Errors(t *testing.T) {
@@ -85,7 +85,7 @@ func Test_Client(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("TD_USER")
 	client.Password = os.Getenv("TD_PASS")
-	client.GetPriceAvail([]string{"0705XT"})
+	client.GetPriceAvail([]string{"TD-0705XT", "TD-5665BX"})
 }
 
 func getXML(filename string) []byte {

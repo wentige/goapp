@@ -1,5 +1,7 @@
 package techdata
 
+import "log"
+
 type Config struct {
 }
 

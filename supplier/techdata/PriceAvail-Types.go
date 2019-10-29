@@ -18,7 +18,7 @@ type RequestLineInfo struct {
 }
 
 type RequestDetail struct {
-	LineInfo RequestLineInfo `xml:"LineInfo"`
+	LineInfo []RequestLineInfo `xml:"LineInfo"`
 }
 
 type XMLPriceAvailSubmit struct {
@@ -61,7 +61,7 @@ type ResponseLineInfo struct {
 }
 
 type ResponseDetail struct {
-	LineInfo ResponseLineInfo `xml:"LineInfo"`
+	LineInfo []ResponseLineInfo `xml:"LineInfo"`
 }
 
 type Summary struct {
