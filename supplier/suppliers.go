@@ -3,7 +3,10 @@ package supplier
 import (
 	"myapp/supplier/asi"
 	"myapp/supplier/dh"
+	"myapp/supplier/ingram"
 	"myapp/supplier/model"
+	"myapp/supplier/synnex"
+	"myapp/supplier/techdata"
 	"strings"
 )
 
@@ -28,11 +31,11 @@ func GetClient(name string) *SupplierClient {
 	case "DH":
 		client = &dh.Client{}
 	case "ING":
-		client = &ing.Client{}
+		client = &ingram.Client{}
 	case "SYN":
-		client = &syn.Client{}
+		client = &synnex.Client{}
 	case "TD":
-		client = &td.Client{}
+		client = &techdata.Client{}
 	}
 
 	return client
