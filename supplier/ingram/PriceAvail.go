@@ -67,7 +67,7 @@ func (self PriceAvail) BuildRequest(skus []string) []byte {
 }
 
 func (self PriceAvail) SendRequest(url string, body []byte) ([]byte, error) {
-	req, err := http.NewRequest("POST", PA_URL, bytes.NewBuffer(body))
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(body))
 	if err != nil {
 		return nil, err
 	}
