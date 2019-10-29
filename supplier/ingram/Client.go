@@ -1,5 +1,7 @@
 package ingram
 
+import "log"
+
 type Config struct {
 }
 

@@ -5,6 +5,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -25,8 +26,7 @@ func Test_PNARequest(t *testing.T) {
 	x.Header.LoginID = "LOGIN-ID"
 	x.Header.Password = "PASSWORD"
 	x.Header.TransactionID = "1"
-	x.Info.SKU = "SKU-1"
-	x.Info.Qty = "123"
+	x.Items = append(x.Items, RequestItem{"SKU-1", "123"})
 	x.ShowDetail = "2"
 
 	output, err := xml.MarshalIndent(x, "", "  ")
@@ -42,8 +42,8 @@ func Test_PNARequest(t *testing.T) {
 	assert.Equal(x.Version, z.Version)
 	assert.Equal(x.Header.SenderID, z.Header.SenderID)
 	assert.Equal(x.Header.LoginID, z.Header.LoginID)
-	assert.Equal(x.Info.SKU, z.Info.SKU)
-	assert.Equal(x.Info.Qty, z.Info.Qty)
+	assert.Equal(x.Items[0].SKU, z.Items[0].SKU)
+	assert.Equal(x.Items[0].Qty, z.Items[0].Qty)
 }
 
 func Test_PNAResponse(t *testing.T) {
@@ -65,19 +65,19 @@ func Test_PNAResponse(t *testing.T) {
 	assert.Equal(x.Header.SenderID, "YOU")
 
 	// Item
-	assert.Equal(x.Item.SKU, "1553CK")
-	assert.Equal(x.Item.Qty, "1")
-	assert.Equal(x.Item.UPC, "0763649064979")
+	assert.Equal(x.Items[0].SKU, "1553CK")
+	assert.Equal(x.Items[0].Qty, "1")
+	assert.Equal(x.Items[0].UPC, "0763649064979")
 
 	// Branch
-	assert.Equal(len(x.Item.Branches), 2)
-	assert.Equal(x.Item.Branches[0].ID, "10")
-	assert.Equal(x.Item.Branches[0].Name, "Vancouver")
-	assert.Equal(x.Item.Branches[0].Availability, "142")
+	assert.Equal(len(x.Items[0].Branches), 2)
+	assert.Equal(x.Items[0].Branches[0].ID, "10")
+	assert.Equal(x.Items[0].Branches[0].Name, "Vancouver")
+	assert.Equal(x.Items[0].Branches[0].Availability, "142")
 
-	assert.Equal(x.Item.Branches[1].ID, "40")
-	assert.Equal(x.Item.Branches[1].Name, "Toronto")
-	assert.Equal(x.Item.Branches[1].Availability, "399")
+	assert.Equal(x.Items[0].Branches[1].ID, "40")
+	assert.Equal(x.Items[0].Branches[1].Name, "Toronto")
+	assert.Equal(x.Items[0].Branches[1].Availability, "399")
 }
 
 func Test_Errors(t *testing.T) {
@@ -87,7 +87,7 @@ func Test_Client(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("ING_USER")
 	client.Password = os.Getenv("ING_PASS")
-	client.GetPriceAvail([]string{"8059YD"})
+	client.GetPriceAvail([]string{"ING-8059YD", "ING-9932DS"})
 }
 
 func getXML(filename string) []byte {

@@ -15,7 +15,7 @@ type RequestHeader struct {
 	TransactionID string `xml:"TransactionID"`
 }
 
-type RequestInfo struct {
+type RequestItem struct {
 	SKU string `xml:"SKU,attr"`
 	Qty string `xml:"Quantity,attr"`
 }
@@ -24,7 +24,7 @@ type PNARequest struct {
 	XMLName    xml.Name      `xml:"PNARequest"`
 	Version    string        `xml:"Version"`
 	Header     RequestHeader `xml:"TransactionHeader"`
-	Info       RequestInfo   `xml:"PNAInformation"`
+	Items      []RequestItem `xml:"PNAInformation"`
 	ShowDetail string        `xml:"ShowDetail"`
 }
 
@@ -71,5 +71,5 @@ type PNAResponse struct {
 	XMLName xml.Name       `xml:"PNAResponse"`
 	Version string         `xml:"Version"`
 	Header  ResponseHeader `xml:"TransactionHeader"`
-	Item    Item           `xml:"PriceAndAvailability"`
+	Items   []Item         `xml:"PriceAndAvailability"`
 }
