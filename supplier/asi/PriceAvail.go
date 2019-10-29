@@ -3,7 +3,6 @@ package asi
 import (
 	"encoding/xml"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"myapp/supplier/model"
 	"net/http"
@@ -22,7 +21,7 @@ func (self PriceAvail) Query(skus []string) *model.PriceAvailResult {
 
 	url := PA_URL + params
 
-	response, err := self.SendRequest(url, nil)
+	response, err := self.SendRequest(url)
 	if err != nil {
 		self.client.LogError(err)
 		return nil
@@ -39,7 +38,7 @@ func (self PriceAvail) Query(skus []string) *model.PriceAvailResult {
 	// logger
 	self.client.LogData(skus[0], PA_URL, params, string(response))
 
-	return ToPriceAvailResult(&x)
+	return self.ToPriceAvailResult(&x)
 }
 
 func (self PriceAvail) BuildRequest(skus []string) string {
@@ -50,7 +49,7 @@ func (self PriceAvail) BuildRequest(skus []string) string {
 	return fmt.Sprintf("?CID=%s&CERT=%s&SKU=%s", cid, cert, sku)
 }
 
-func (self PriceAvail) SendRequest(url string, body io.Reader) ([]byte, error) {
+func (self PriceAvail) SendRequest(url string) ([]byte, error) {
 	// new http request
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -81,7 +80,7 @@ func (self PriceAvail) SendRequest(url string, body io.Reader) ([]byte, error) {
 	return response, nil
 }
 
-func ToPriceAvailResult(x *ASIInventory) *model.PriceAvailResult {
+func (self PriceAvail) ToPriceAvailResult(x *ASIInventory) *model.PriceAvailResult {
 	r := &model.PriceAvailResult{}
 	return r
 }
