@@ -1,5 +1,7 @@
 package dh
 
+import "log"
+
 type Config struct {
 }
 

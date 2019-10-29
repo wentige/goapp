@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -74,7 +75,7 @@ func Test_Client(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("DH_USER")
 	client.Password = os.Getenv("DH_PASS")
-	client.GetPriceAvail([]string{"980001203CDN"})
+	client.GetPriceAvail([]string{"DH-980001203CDN", "DH-XS708T100NESCA"})
 }
 
 func getXML(filename string) []byte {
