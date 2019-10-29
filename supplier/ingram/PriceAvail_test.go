@@ -83,6 +83,13 @@ func Test_PNAResponse(t *testing.T) {
 func Test_Errors(t *testing.T) {
 }
 
+func Test_Client(t *testing.T) {
+	client := &Client{}
+	client.Username = os.Getenv("ING_USER")
+	client.Password = os.Getenv("ING_PASS")
+	client.GetPriceAvail([]string{"8059YD"})
+}
+
 func getXML(filename string) []byte {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {

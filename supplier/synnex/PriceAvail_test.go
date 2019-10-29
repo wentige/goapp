@@ -73,6 +73,13 @@ func Test_Response(t *testing.T) {
 func Test_Errors(t *testing.T) {
 }
 
+func Test_Client(t *testing.T) {
+	client := &Client{}
+	client.Username = os.Getenv("SYN_USER")
+	client.Password = os.Getenv("SYN_PASS")
+	client.GetPriceAvail([]string{"6024136"})
+}
+
 func getXML(filename string) []byte {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
