@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -75,9 +76,10 @@ func Test_Errors(t *testing.T) {
 
 func Test_Client(t *testing.T) {
 	client := &Client{}
+	client.CustomerNo = os.Getenv("SYN_CUST")
 	client.Username = os.Getenv("SYN_USER")
 	client.Password = os.Getenv("SYN_PASS")
-	client.GetPriceAvail([]string{"6024136"})
+	client.GetPriceAvail([]string{"SYN-6024136", "SYN-4907081"})
 }
 
 func getXML(filename string) []byte {

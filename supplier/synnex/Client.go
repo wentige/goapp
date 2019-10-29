@@ -1,11 +1,14 @@
 package synnex
 
+import "log"
+
 type Config struct {
 }
 
 type Client struct {
-	Username string
-	Password string
+	CustomerNo string
+	Username   string
+	Password   string
 	//Logger
 }
 
