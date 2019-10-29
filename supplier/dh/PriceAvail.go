@@ -30,7 +30,7 @@ func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	// new http request
 	req, err := http.NewRequest("POST", PA_URL, body)
 	if err != nil {
-		log.Println(err)
+		c.LogError(err)
 	}
 
 	// http header
