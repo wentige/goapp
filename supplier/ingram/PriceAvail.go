@@ -14,32 +14,62 @@ import (
 
 const PA_URL = "https://newport.ingrammicro.com/mustang"
 
-func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
-	var in PNARequest
+type PriceAvail struct {
+	client *Client
+}
 
-	in.Version = "2.0"
-	in.ShowDetail = "2"
-	in.Header.SenderID = "ME"
-	in.Header.ReceiverID = "YOU"
-	in.Header.CountryCode = "FT"
-	in.Header.LoginID = c.Username
-	in.Header.Password = c.Password
-	in.Header.TransactionID = "1"
+func (self PriceAvail) Query(skus []string) *model.PriceAvailResult {
+	request := self.BuildRequest(skus)
+
+	response, err := self.SendRequest(PA_URL, request)
+	if err != nil {
+		self.client.LogError(err)
+		return nil
+	}
+
+	var x PNAResponse
+
+	reader := bytes.NewReader(response)
+	decoder := xml.NewDecoder(reader)
+	decoder.CharsetReader = charset.NewReaderLabel
+	err = decoder.Decode(&x)
+	if err != nil {
+		self.client.LogError(err)
+		return nil
+	}
+
+	// logger
+	self.client.LogData(skus[0], PA_URL, string(request), string(response))
+
+	return self.ToPriceAvailResult(&x)
+}
+
+func (self PriceAvail) BuildRequest(skus []string) []byte {
+	var x PNARequest
+
+	x.Version = "2.0"
+	x.ShowDetail = "2"
+	x.Header.SenderID = "ME"
+	x.Header.ReceiverID = "YOU"
+	x.Header.CountryCode = "FT"
+	x.Header.LoginID = self.client.Username
+	x.Header.Password = self.client.Password
+	x.Header.TransactionID = "1"
 
 	for _, sku := range skus {
 		sku = strings.TrimPrefix(sku, "ING-")
 		item := RequestItem{SKU: sku}
-		in.Items = append(in.Items, item)
+		x.Items = append(x.Items, item)
 	}
 
-	// new http request
-	buf, _ := xml.MarshalIndent(in, "", "  ")
-	body := bytes.NewBuffer(buf)
+	body, _ := xml.MarshalIndent(x, "", "  ")
+	return body
+}
 
-	// new http request
-	req, err := http.NewRequest("POST", PA_URL, body)
+func (self PriceAvail) SendRequest(url string, body []byte) ([]byte, error) {
+	req, err := http.NewRequest("POST", PA_URL, bytes.NewBuffer(body))
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
 	// http header
@@ -54,32 +84,19 @@ func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	res, err := client.Do(req)
 	defer res.Body.Close()
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
 	// parse response
 	response, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
-	var x PNAResponse
-
-	reader := bytes.NewReader(response)
-	decoder := xml.NewDecoder(reader)
-	decoder.CharsetReader = charset.NewReaderLabel
-	err = decoder.Decode(&x)
-	if err != nil {
-		c.LogError(err)
-	}
-
-	// logger
-	c.LogData(skus[0], PA_URL, string(buf), string(response))
-
-	return ToPriceAvailResult(&x)
+	return response, nil
 }
 
-func ToPriceAvailResult(x *PNAResponse) *model.PriceAvailResult {
+func (self PriceAvail) ToPriceAvailResult(x *PNAResponse) *model.PriceAvailResult {
 	r := &model.PriceAvailResult{}
 	return r
 }
