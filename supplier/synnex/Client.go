@@ -30,3 +30,8 @@ func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	pa := &PriceAvail{c}
 	return pa.Query(skus)
 }
+
+func (c *Client) Purchase(items []model.PurchaseItem) *model.PurchaseResult {
+	po := &PurchaseOrder{c}
+	return po.Perform(items)
+}

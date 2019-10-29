@@ -12,6 +12,9 @@ type Client struct {
 	Username string
 	Password string
 	//Logger
+
+	LastRequest  string
+	LastResponse string
 }
 
 func (c *Client) LogError(err error) {
@@ -28,4 +31,9 @@ func (c *Client) LogData(sku, url, req, res string) {
 func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	pa := &PriceAvail{c}
 	return pa.Query(skus)
+}
+
+func (c *Client) Purchase(items []model.PurchaseItem) *model.PurchaseResult {
+	po := &PurchaseOrder{c}
+	return po.Perform(items)
 }
