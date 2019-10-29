@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -59,6 +60,13 @@ func Test_Errors(t *testing.T) {
 
 	assert.Equal(x.Error.Code, "101")
 	assert.Equal(x.Error.Message, "No inventory found")
+}
+
+func Test_Client(t *testing.T) {
+	client := &Client{}
+	client.Username = os.Getenv("ASI_USER")
+	client.Password = os.Getenv("ASI_PASS")
+	client.GetPriceAvail([]string{"209435"})
 }
 
 func getXML(filename string) []byte {
