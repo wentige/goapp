@@ -12,28 +12,57 @@ import (
 
 const PA_URL = "https://ec.synnex.ca/SynnexXML/PriceAvailability"
 
-func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
-	var in PriceRequest
+type PriceAvail struct {
+	client *Client
+}
+
+func (self PriceAvail) Query(skus []string) *model.PriceAvailResult {
+	request := self.BuildRequest(skus)
+
+	response, err := self.SendRequest(PA_URL, request)
+	if err != nil {
+		self.client.LogError(err)
+		return nil
+	}
+
+	var x PriceResponse
+
+	err = xml.Unmarshal(response, &x)
+	if err != nil {
+		self.client.LogError(err)
+		return nil
+	}
+
+	// logger
+	self.client.LogData(skus[0], PA_URL, string(request), string(response))
+
+	return self.ToPriceAvailResult(&x)
+}
+
+func (self PriceAvail) BuildRequest(skus []string) []byte {
+	var x PriceRequest
 
 	// fill the request struct
-	in.CustomerNo = c.CustomerNo
-	in.Username = c.Username
-	in.Password = c.Password
+	x.CustomerNo = self.client.CustomerNo
+	x.Username = self.client.Username
+	x.Password = self.client.Password
 
 	for i, sku := range skus {
 		sku = strings.TrimPrefix(sku, "SYN-")
 		item := SkuInfo{sku, i + 1}
-		in.SkuList = append(in.SkuList, item)
+		x.SkuList = append(x.SkuList, item)
 	}
 
 	// convert to xml
-	buf, _ := xml.MarshalIndent(in, "", "  ")
-	body := bytes.NewBuffer(buf)
+	body, _ := xml.MarshalIndent(x, "", "  ")
+	return body
+}
 
+func (self PriceAvail) SendRequest(url string, body []byte) ([]byte, error) {
 	// new http request
-	req, err := http.NewRequest("POST", PA_URL, body)
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(body))
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
 	// http header
@@ -48,28 +77,19 @@ func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	res, err := client.Do(req)
 	defer res.Body.Close()
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
 	// parse response
 	response, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
-	var x PriceResponse
-	err = xml.Unmarshal(response, &x)
-	if err != nil {
-		c.LogError(err)
-	}
-
-	// logger
-	c.LogData(skus[0], PA_URL, string(buf), string(response))
-
-	return ToPriceAvailResult(&x)
+	return response, nil
 }
 
-func ToPriceAvailResult(x *PriceResponse) *model.PriceAvailResult {
+func (self PriceAvail) ToPriceAvailResult(x *PriceResponse) *model.PriceAvailResult {
 	r := &model.PriceAvailResult{}
 	return r
 }

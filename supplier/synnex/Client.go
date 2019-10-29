@@ -1,6 +1,9 @@
 package synnex
 
-import "log"
+import (
+	"log"
+	"myapp/supplier/model"
+)
 
 type Config struct {
 }
@@ -21,4 +24,9 @@ func (c *Client) LogData(sku, url, req, res string) {
 	log.Println(url)
 	log.Println(req)
 	log.Println(res)
+}
+
+func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
+	pa := &PriceAvail{c}
+	return pa.Query(skus)
 }
