@@ -3,8 +3,8 @@ package asi
 import (
 	"encoding/xml"
 	"fmt"
+	"io"
 	"io/ioutil"
-	"log"
 	"myapp/supplier/model"
 	"net/http"
 	"strings"
@@ -13,19 +13,48 @@ import (
 
 const PA_URL = "https://www.asipartner.com/partneraccess/xml/price.asp"
 
-func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
-	cid := c.Username
-	cert := c.Password
+type PriceAvail struct {
+	client *Client
+}
+
+func (self PriceAvail) Query(skus []string) *model.PriceAvailResult {
+	params := self.BuildRequest(skus)
+
+	url := PA_URL + params
+
+	response, err := self.SendRequest(url, nil)
+	if err != nil {
+		self.client.LogError(err)
+		return nil
+	}
+
+	var x ASIInventory
+
+	err = xml.Unmarshal(response, &x)
+	if err != nil {
+		self.client.LogError(err)
+		return nil
+	}
+
+	// logger
+	self.client.LogData(skus[0], PA_URL, params, string(response))
+
+	return ToPriceAvailResult(&x)
+}
+
+func (self PriceAvail) BuildRequest(skus []string) string {
+	cid := self.client.Username
+	cert := self.client.Password
 	sku := strings.TrimPrefix(skus[0], "AS-") // one SKU per request
 
-	// build URL
-	param := fmt.Sprintf("?CID=%s&CERT=%s&SKU=%s", cid, cert, sku)
-	url := PA_URL + param
+	return fmt.Sprintf("?CID=%s&CERT=%s&SKU=%s", cid, cert, sku)
+}
 
+func (self PriceAvail) SendRequest(url string, body io.Reader) ([]byte, error) {
 	// new http request
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
-		log.Println(err)
+		return nil, err
 	}
 
 	// http header
@@ -36,29 +65,20 @@ func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 		Timeout: time.Second * 30,
 	}
 
-	// do request
+	// send request
 	res, err := client.Do(req)
 	defer res.Body.Close()
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
-	// parse response
+	// read response
 	response, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
-	var x ASIInventory
-	err = xml.Unmarshal(response, &x)
-	if err != nil {
-		c.LogError(err)
-	}
-
-	// logger
-	c.LogData(sku, PA_URL, param, string(response))
-
-	return ToPriceAvailResult(&x)
+	return response, nil
 }
 
 func ToPriceAvailResult(x *ASIInventory) *model.PriceAvailResult {
