@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/xml"
 	"io/ioutil"
-	"log"
 	"myapp/supplier/model"
 	"net/http"
 	"strings"
@@ -13,24 +12,54 @@ import (
 
 const PA_URL = "https://www.dandh.ca/dhXML/xmlDispatch"
 
-func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
-	var in XmlRequest
+type PriceAvail struct {
+	client *Client
+}
 
-	in.Request = "price-availability"
-	in.Login.UserId = c.Username
-	in.Login.Password = c.Password
-	//in.Partnums = make([]string, 0)
-	for _, sku := range skus {
-		in.Partnums = append(in.Partnums, strings.TrimPrefix(sku, "DH-"))
+func (self PriceAvail) Query(skus []string) *model.PriceAvailResult {
+	request := self.BuildRequest(skus)
+
+	response, err := self.SendRequest(PA_URL, request)
+	if err != nil {
+		self.client.LogError(err)
+		return nil
 	}
 
-	buf, _ := xml.MarshalIndent(in, "", "  ")
-	body := bytes.NewBuffer(buf)
+	var x XmlResponse
 
-	// new http request
-	req, err := http.NewRequest("POST", PA_URL, body)
+	err = xml.Unmarshal(response, &x)
 	if err != nil {
-		c.LogError(err)
+		self.client.LogError(err)
+		return nil
+	}
+
+	// logger
+	self.client.LogData(skus[0], PA_URL, string(request), string(response))
+
+	return self.ToPriceAvailResult(&x)
+}
+
+func (self PriceAvail) BuildRequest(skus []string) []byte {
+	var x XmlRequest
+
+	x.Request = "price-availability"
+	x.Login.UserId = self.client.Username
+	x.Login.Password = self.client.Password
+	//x.Partnums = make([]string, 0)
+
+	for _, sku := range skus {
+		x.Partnums = append(x.Partnums, strings.TrimPrefix(sku, "DH-"))
+	}
+
+	body, _ := xml.MarshalIndent(x, "", "  ")
+	return body
+}
+
+func (self PriceAvail) SendRequest(url string, body []byte) ([]byte, error) {
+	// new http request
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(body))
+	if err != nil {
+		return nil, err
 	}
 
 	// http header
@@ -45,28 +74,19 @@ func (c *Client) GetPriceAvail(skus []string) *model.PriceAvailResult {
 	res, err := client.Do(req)
 	defer res.Body.Close()
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
 	// parse response
 	response, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		c.LogError(err)
+		return nil, err
 	}
 
-	var x XmlResponse
-	err = xml.Unmarshal(response, &x)
-	if err != nil {
-		c.LogError(err)
-	}
-
-	// logger
-	c.LogData(skus[0], PA_URL, string(buf), string(response))
-
-	return ToPriceAvailResult(&x)
+	return response, nil
 }
 
-func ToPriceAvailResult(x *XmlResponse) *model.PriceAvailResult {
+func (self PriceAvail) ToPriceAvailResult(x *XmlResponse) *model.PriceAvailResult {
 	r := &model.PriceAvailResult{}
 	return r
 }
