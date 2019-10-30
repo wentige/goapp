@@ -3,10 +3,8 @@ package asi
 import (
 	"bytes"
 	"encoding/xml"
-	"io/ioutil"
+
 	"myapp/supplier/model"
-	"net/http"
-	"time"
 )
 
 const PO_URL = "https://www.asipartner.com/partneraccess/xml/order.asp"
@@ -47,34 +45,7 @@ func (self PurchaseOrder) BuildRequest(item map[string]string) []byte {
 }
 
 func (self PurchaseOrder) SendRequest(url string, body []byte) ([]byte, error) {
-	// new http request
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(body))
-	if err != nil {
-		return nil, err
-	}
-
-	// http header
-	req.Header.Add("Content-Type", "application/xml; charset=utf-8")
-
-	// http client
-	client := &http.Client{
-		Timeout: time.Second * 30,
-	}
-
-	// send request
-	res, err := client.Do(req)
-	defer res.Body.Close()
-	if err != nil {
-		return nil, err
-	}
-
-	// read response
-	response, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	return response, nil
+	return self.client.SendRequest("POST", url, bytes.NewBuffer(body))
 }
 
 func (self PurchaseOrder) ToPurchaseResult(x *ASIInventory) *model.PurchaseResult {

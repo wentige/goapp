@@ -3,11 +3,9 @@ package dh
 import (
 	"bytes"
 	"encoding/xml"
-	"io/ioutil"
-	"myapp/supplier/model"
-	"net/http"
 	"strings"
-	"time"
+
+	"myapp/supplier/model"
 )
 
 const PA_URL = "https://www.dandh.ca/dhXML/xmlDispatch"
@@ -56,34 +54,7 @@ func (self PriceAvail) BuildRequest(skus []string) []byte {
 }
 
 func (self PriceAvail) SendRequest(url string, body []byte) ([]byte, error) {
-	// new http request
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(body))
-	if err != nil {
-		return nil, err
-	}
-
-	// http header
-	req.Header.Add("Content-Type", "application/xml; charset=utf-8")
-
-	// http client
-	client := &http.Client{
-		Timeout: time.Second * 30,
-	}
-
-	// do request
-	res, err := client.Do(req)
-	defer res.Body.Close()
-	if err != nil {
-		return nil, err
-	}
-
-	// parse response
-	response, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	return response, nil
+	return self.client.SendRequest("POST", url, bytes.NewBuffer(body))
 }
 
 func (self PriceAvail) ToPriceAvailResult(x *XmlResponse) *model.PriceAvailResult {

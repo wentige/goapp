@@ -42,4 +42,8 @@ type ASIOrderReply struct {
 	Order   struct {
 		Orderid string `xml:"orderid"`
 	} `xml:"order"`
+	Error struct {
+		Code    string `xml:"code"`
+		Message string `xml:"message"`
+	} `xml:"error"`
 }

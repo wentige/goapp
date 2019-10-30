@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ASIOrderReply>
+  <error>
+    <code>101</code>
+    <message>SKU 100166's price does not match your XML feed price. It should be $74.08</message>
+  </error>
+</ASIOrderReply>
