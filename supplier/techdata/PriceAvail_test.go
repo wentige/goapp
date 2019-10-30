@@ -12,7 +12,7 @@ import (
 
 var pr = fmt.Println
 
-func Test_Request(t *testing.T) {
+func Test_PA_Request(t *testing.T) {
 	assert := assert.New(t)
 	assert.Nil(nil)
 
@@ -41,7 +41,7 @@ func Test_Request(t *testing.T) {
 	assert.Equal(x.Detail.LineInfo[0].RefID, z.Detail.LineInfo[0].RefID)
 }
 
-func Test_Response(t *testing.T) {
+func Test_PA_Response(t *testing.T) {
 	assert := assert.New(t)
 
 	filename := "fixtures/PriceAvail-Response-1.xml"
@@ -78,17 +78,17 @@ func Test_Response(t *testing.T) {
 	assert.Equal(x.Detail.LineInfo[0].Warehouses[1].Qty, "0")
 }
 
-func Test_Errors(t *testing.T) {
+func Test_PA_Errors(t *testing.T) {
 }
 
-func Test_Client(t *testing.T) {
+func Test_GetPriceAvail(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("TD_USER")
 	client.Password = os.Getenv("TD_PASS")
 	client.GetPriceAvail([]string{"TD-0705XT", "TD-5665BX"})
 }
 
-func getXML(filename string) []byte {
+func getPAXML(filename string) []byte {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
 		panic(err)

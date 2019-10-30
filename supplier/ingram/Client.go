@@ -10,9 +10,6 @@ import (
 	"myapp/supplier/model"
 )
 
-type Config struct {
-}
-
 type Client struct {
 	Username string
 	Password string

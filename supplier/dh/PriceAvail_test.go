@@ -2,7 +2,6 @@ package dh
 
 import (
 	"encoding/xml"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"testing"
@@ -10,9 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var pr = fmt.Println
-
-func Test_XmlRequest(t *testing.T) {
+func Test_PA_XmlRequest(t *testing.T) {
 	assert := assert.New(t)
 
 	var x XmlRequest
@@ -39,11 +36,11 @@ func Test_XmlRequest(t *testing.T) {
 	assert.Equal(x.Partnums, z.Partnums)
 }
 
-func Test_XmlResponse(t *testing.T) {
+func Test_PA_XmlResponse(t *testing.T) {
 	assert := assert.New(t)
 
 	filename := "fixtures/PriceAvail-Response-1.xml"
-	data := getXML(filename)
+	data := getPAXML(filename)
 
 	var x XmlResponse
 
@@ -68,17 +65,17 @@ func Test_XmlResponse(t *testing.T) {
 	assert.Equal(x.Items[1].Message, "Model: MCUPMP has been discontinued and has No stock")
 }
 
-func Test_Errors(t *testing.T) {
+func Test_PA_Errors(t *testing.T) {
 }
 
-func Test_Client(t *testing.T) {
+func Test_GetPriceAvail(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("DH_USER")
 	client.Password = os.Getenv("DH_PASS")
 	client.GetPriceAvail([]string{"DH-980001203CDN", "DH-XS708T100NESCA"})
 }
 
-func getXML(filename string) []byte {
+func getPAXML(filename string) []byte {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
 		panic(err)

@@ -1,13 +1,16 @@
-package asi
+package techdata
 
 import (
 	"encoding/xml"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
+
+var pr = fmt.Println
 
 func Test_PO_Request(t *testing.T) {
 	assert := assert.New(t)
@@ -40,8 +43,8 @@ func Test_PO_Errors(t *testing.T) {
 
 func Test_PurchaseOrder(t *testing.T) {
 	client := &Client{}
-	client.Username = os.Getenv("ASI_USER")
-	client.Password = os.Getenv("ASI_PASS")
+	client.Username = os.Getenv("TD_USER")
+	client.Password = os.Getenv("TD_PASS")
 	client.GetPriceAvail([]string{"209435"})
 }
 

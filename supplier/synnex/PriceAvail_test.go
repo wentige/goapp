@@ -2,7 +2,6 @@ package synnex
 
 import (
 	"encoding/xml"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"testing"
@@ -10,9 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var pr = fmt.Println
-
-func Test_Request(t *testing.T) {
+func Test_PA_Request(t *testing.T) {
 	assert := assert.New(t)
 
 	var x PriceRequest
@@ -43,11 +40,11 @@ func Test_Request(t *testing.T) {
 	assert.Equal(x.SkuList[0].LineNumber, z.SkuList[0].LineNumber)
 }
 
-func Test_Response(t *testing.T) {
+func Test_PA_Response(t *testing.T) {
 	assert := assert.New(t)
 
 	filename := "fixtures/PriceAvail-Response-1.xml"
-	data := getXML(filename)
+	data := getPAXML(filename)
 
 	var x PriceResponse
 
@@ -71,10 +68,10 @@ func Test_Response(t *testing.T) {
 	assert.Equal(x.Items[0].Warehouses[1].Info.Number, "29")
 }
 
-func Test_Errors(t *testing.T) {
+func Test_PA_Errors(t *testing.T) {
 }
 
-func Test_Client(t *testing.T) {
+func Test_GetPriceAvail(t *testing.T) {
 	client := &Client{}
 	client.CustomerNo = os.Getenv("SYN_CUST")
 	client.Username = os.Getenv("SYN_USER")
@@ -82,7 +79,7 @@ func Test_Client(t *testing.T) {
 	client.GetPriceAvail([]string{"SYN-6024136", "SYN-4907081"})
 }
 
-func getXML(filename string) []byte {
+func getPAXML(filename string) []byte {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
 		panic(err)

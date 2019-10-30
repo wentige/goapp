@@ -3,7 +3,6 @@ package ingram
 import (
 	"bytes"
 	"encoding/xml"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"testing"
@@ -12,9 +11,7 @@ import (
 	"golang.org/x/net/html/charset"
 )
 
-var pr = fmt.Println
-
-func Test_PNARequest(t *testing.T) {
+func Test_PA_Request(t *testing.T) {
 	assert := assert.New(t)
 
 	var x PNARequest
@@ -46,11 +43,11 @@ func Test_PNARequest(t *testing.T) {
 	assert.Equal(x.Items[0].Qty, z.Items[0].Qty)
 }
 
-func Test_PNAResponse(t *testing.T) {
+func Test_PA_Response(t *testing.T) {
 	assert := assert.New(t)
 
 	filename := "fixtures/PriceAvail-Response-1.xml"
-	data := getXML(filename)
+	data := getPAXML(filename)
 
 	var x PNAResponse
 
@@ -80,17 +77,17 @@ func Test_PNAResponse(t *testing.T) {
 	assert.Equal(x.Items[0].Branches[1].Availability, "399")
 }
 
-func Test_Errors(t *testing.T) {
+func Test_PA_Errors(t *testing.T) {
 }
 
-func Test_Client(t *testing.T) {
+func Test_GetPriceAvail(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("ING_USER")
 	client.Password = os.Getenv("ING_PASS")
 	client.GetPriceAvail([]string{"ING-8059YD", "ING-9932DS"})
 }
 
-func getXML(filename string) []byte {
+func getPAXML(filename string) []byte {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
 		panic(err)

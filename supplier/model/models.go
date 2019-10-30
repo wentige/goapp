@@ -24,23 +24,21 @@ type PriceAvailResult struct {
 /**
  * Purchase order request info
  */
-type Buyer struct {
-	Name     string
-	Company  string
-	Address  string
-	City     string
-	Province string
-	Country  string
-	ZipCode  string
-	Phone    string
-}
-
 type PurchaseItem struct {
 	Sku     string
 	Price   string
 	Qty     string
 	Comment string
-	ShipTo  Buyer
+	ShipTo  struct {
+		Name     string
+		Company  string
+		Address  string
+		City     string
+		Province string
+		Country  string
+		ZipCode  string
+		Phone    string
+	}
 }
 
 /**

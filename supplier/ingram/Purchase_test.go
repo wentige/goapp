@@ -1,4 +1,4 @@
-package asi
+package ingram
 
 import (
 	"encoding/xml"
@@ -40,8 +40,8 @@ func Test_PO_Errors(t *testing.T) {
 
 func Test_PurchaseOrder(t *testing.T) {
 	client := &Client{}
-	client.Username = os.Getenv("ASI_USER")
-	client.Password = os.Getenv("ASI_PASS")
+	client.Username = os.Getenv("ING_USER")
+	client.Password = os.Getenv("ING_PASS")
 	client.GetPriceAvail([]string{"209435"})
 }
 

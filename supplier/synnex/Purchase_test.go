@@ -1,4 +1,4 @@
-package asi
+package synnex
 
 import (
 	"encoding/xml"
@@ -40,8 +40,8 @@ func Test_PO_Errors(t *testing.T) {
 
 func Test_PurchaseOrder(t *testing.T) {
 	client := &Client{}
-	client.Username = os.Getenv("ASI_USER")
-	client.Password = os.Getenv("ASI_PASS")
+	client.Username = os.Getenv("SYN_USER")
+	client.Password = os.Getenv("SYN_PASS")
 	client.GetPriceAvail([]string{"209435"})
 }
 
