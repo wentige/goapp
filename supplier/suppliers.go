@@ -13,12 +13,14 @@ import (
 //type FileLogger = filelogger.FileLogger
 
 type SupplierClient interface {
-	SetLogger(logger map[string]interface{}) // filelogger.FileLogger
-	SetConfig(config map[string]interface{})
 	GetPriceAvail(skus []string) *model.PriceAvailResult
-	PurchaseOrder(items []model.PurchaseItem) *model.PurchaseResult
-	//Dropship(...)
+	Purchase(item map[string]string) *model.PurchaseResult
+	Dropship(item map[string]string) *model.PurchaseResult
+
 	//GetOrderStatus(...)
+
+	//SetLogger(logger map[string]interface{}) // filelogger.FileLogger
+	//SetConfig(config map[string]interface{})
 }
 
 func GetClient(name string) *SupplierClient {

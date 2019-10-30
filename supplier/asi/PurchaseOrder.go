@@ -1,23 +1,22 @@
 package asi
 
 import (
+	"bytes"
 	"encoding/xml"
-	"fmt"
 	"io/ioutil"
 	"myapp/supplier/model"
 	"net/http"
-	"strings"
 	"time"
 )
 
-const PO_URL = ""
+const PO_URL = "https://www.asipartner.com/partneraccess/xml/order.asp"
 
 type PurchaseOrder struct {
 	client *Client
 }
 
-func (self PurchaseOrder) Perform(items []model.PurchaseItem) *model.PurchaseResult {
-	request := self.BuildRequest(items)
+func (self PurchaseOrder) Perform(item map[string]string) *model.PurchaseResult {
+	request := self.BuildRequest(item)
 
 	response, err := self.SendRequest(PO_URL, request)
 	if err != nil {
@@ -25,7 +24,7 @@ func (self PurchaseOrder) Perform(items []model.PurchaseItem) *model.PurchaseRes
 		return nil
 	}
 
-	var x ASIInventory
+	var x ASIOrderReply
 
 	err = xml.Unmarshal(response, &x)
 	if err != nil {
@@ -34,22 +33,22 @@ func (self PurchaseOrder) Perform(items []model.PurchaseItem) *model.PurchaseRes
 	}
 
 	// logger
-	self.client.LogData(skus[0], PO_URL, string(request), string(response))
+	sku := item["SKU"]
+	self.client.LogData(sku, PO_URL, string(request), string(response))
 
 	return self.ToPurchaseResult(&x)
 }
 
-func (self PurchaseOrder) BuildRequest(skus []string) string {
-	cid := self.client.Username
-	cert := self.client.Password
-	sku := strings.TrimPrefix(skus[0], "AS-") // one SKU per request
+func (self PurchaseOrder) BuildRequest(item map[string]string) []byte {
+	var x ASIOrderRequest
 
-	return fmt.Sprintf("?CID=%s&CERT=%s&SKU=%s", cid, cert, sku)
+	body, _ := xml.MarshalIndent(x, "", "  ")
+	return body
 }
 
 func (self PurchaseOrder) SendRequest(url string, body []byte) ([]byte, error) {
 	// new http request
-	req, err := http.NewRequest("POST", url, nil)
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(body))
 	if err != nil {
 		return nil, err
 	}
@@ -79,6 +78,6 @@ func (self PurchaseOrder) SendRequest(url string, body []byte) ([]byte, error) {
 }
 
 func (self PurchaseOrder) ToPurchaseResult(x *ASIInventory) *model.PurchaseResult {
-	r := &model.PurchaseOrderResult{}
+	r := &model.PurchaseResult{}
 	return r
 }
