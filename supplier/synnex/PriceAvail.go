@@ -1,7 +1,6 @@
 package synnex
 
 import (
-	"bytes"
 	"encoding/xml"
 	"strings"
 
@@ -57,7 +56,7 @@ func (self PriceAvail) BuildRequest(skus []string) []byte {
 }
 
 func (self PriceAvail) SendRequest(url string, body []byte) ([]byte, error) {
-	return self.client.SendRequest("POST", url, bytes.NewBuffer(body))
+	return self.client.SendRequest("POST", url, body)
 }
 
 func (self PriceAvail) ToPriceAvailResult(x *PriceResponse) *model.PriceAvailResult {

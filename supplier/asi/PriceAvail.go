@@ -3,11 +3,8 @@ package asi
 import (
 	"encoding/xml"
 	"fmt"
-	"io/ioutil"
 	"myapp/supplier/model"
-	"net/http"
 	"strings"
-	"time"
 )
 
 const PA_URL = "https://www.asipartner.com/partneraccess/xml/price.asp"
@@ -50,34 +47,7 @@ func (self PriceAvail) BuildRequest(skus []string) string {
 }
 
 func (self PriceAvail) SendRequest(url string) ([]byte, error) {
-	// new http request
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	// http header
-	req.Header.Add("Content-Type", "application/xml; charset=utf-8")
-
-	// http client
-	client := &http.Client{
-		Timeout: time.Second * 30,
-	}
-
-	// send request
-	res, err := client.Do(req)
-	defer res.Body.Close()
-	if err != nil {
-		return nil, err
-	}
-
-	// read response
-	response, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	return response, nil
+	return self.client.SendRequest("GET", url, nil)
 }
 
 func (self PriceAvail) ToPriceAvailResult(x *ASIInventory) *model.PriceAvailResult {

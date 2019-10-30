@@ -1,13 +1,14 @@
 package supplier
 
 import (
+	"strings"
+
 	"myapp/supplier/asi"
 	"myapp/supplier/dh"
 	"myapp/supplier/ingram"
 	"myapp/supplier/model"
 	"myapp/supplier/synnex"
 	"myapp/supplier/techdata"
-	"strings"
 )
 
 //type FileLogger = filelogger.FileLogger

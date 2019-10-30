@@ -1,7 +1,6 @@
 package techdata
 
 import (
-	"bytes"
 	"encoding/xml"
 
 	"myapp/supplier/model"
@@ -45,7 +44,7 @@ func (self PurchaseOrder) BuildRequest(item map[string]string) []byte {
 }
 
 func (self PurchaseOrder) SendRequest(url string, body []byte) ([]byte, error) {
-	return self.client.SendRequest("POST", url, bytes.NewBuffer(body))
+	return self.client.SendRequest("POST", url, body)
 }
 
 func (self PurchaseOrder) ToPurchaseResult(x *ASIInventory) *model.PurchaseResult {
