@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<XML_Order_Submit>
+  <Header>
+    <UserName>567861</UserName>
+    <Password>bettdxml9014</Password>
+    <ResponseVersion>1.6</ResponseVersion>
+    <OrderTypeCode>BS</OrderTypeCode>
+    <PONbr>701-0093022-1599463</PONbr>
+    <RefNbrs>
+      <RefIDQual>EU</RefIDQual>
+      <RefID>701-0093022-1599463</RefID>
+    </RefNbrs>
+    <SalesRequirementCode/>
+    <Name>Groupe Major - M.Briand Gionest</Name>
+    <AddrInfo>
+      <Addr>1255 boul Lebourgneuf</Addr>
+      <Addr>Suite 280</Addr>
+      <Addr>418.730.2797</Addr>
+    </AddrInfo>
+    <CityName>Quebec</CityName>
+    <StateProvinceCode>QC</StateProvinceCode>
+    <PostalCode>G2K 0M6</PostalCode>
+    <ContactName>Roy Zhang</ContactName>
+    <ContactPhoneNbr>418.730.2797</ContactPhoneNbr>
+    <EndUserInfo>
+      <EuiGovAgency/>
+      <EuiGovCabinetLevel/>
+      <EuiContractNbr/>
+      <EuiContractType/>
+      <EuiOrderPriority/>
+      <EuiMarketType/>
+      <EuiContactName>Groupe Major - M.Briand Gionest</EuiContactName>
+      <EuiPhoneNbr>418.730.2797</EuiPhoneNbr>
+      <EuiFaxNbr/>
+      <EuiName>Groupe Major - M.Briand Gionest</EuiName>
+      <EuiAddr1>1255 boul Lebourgneuf Suite 280</EuiAddr1>
+      <EuiAddr2/>
+      <EuiAddr3/>
+      <EuiCityName>Quebec</EuiCityName>
+      <EuiStateProvinceCode>QC</EuiStateProvinceCode>
+      <EuiPostalCode>G2K 0M6</EuiPostalCode>
+      <EuiCountryCode>CA</EuiCountryCode>
+      <EuiSicCode/>
+      <EuiOrderPromoType/>
+      <EuiEndUserLicenseNbr/>
+      <EuiEndUserPODate/>
+      <EuiEndUserRef1/>
+      <EuiEndUserRef2/>
+      <EuiEndUserRef3/>
+      <EuiInstallName/>
+      <EuiDropShipType/>
+      <EuiContactEmailAddr1/>
+      <EuiContactEmailAddr2/>
+    </EndUserInfo>
+    <MyOrderTracker>
+      <ResellerEmail>jessica@btecanada.com</ResellerEmail>
+      <ResellerEvents>OC</ResellerEvents>
+      <ResellerEvents>OS</ResellerEvents>
+    </MyOrderTracker>
+  </Header>
+  <Detail>
+    <LineInfo>
+      <QtyOrdered>1</QtyOrdered>
+      <ProductIDQual>VP</ProductIDQual>
+      <ProductID>0331ZE</ProductID>
+      <WhseCode>A1</WhseCode>
+      <IDCode>UP</IDCode>
+      <OrderMessageLine/>
+    </LineInfo>
+  </Detail>
+</XML_Order_Submit>

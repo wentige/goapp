@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<OrderResponse>
+  <Version>2.0</Version>
+  <TransactionHeader>
+    <SenderID/>
+    <ReceiverID/>
+    <ErrorStatus ErrorNumber=""/>
+    <DocumentID>{B40211C1-FA46-11E9-BDC1-09450A0C423F}</DocumentID>
+    <TransactionID> </TransactionID>
+    <TimeStamp>2019-10-29T05:21:58</TimeStamp>
+  </TransactionHeader>
+  <OrderInfo>
+    <OrderNumbers>
+      <BranchOrderNumber>40G1NPF</BranchOrderNumber>
+      <CustomerPO>70270572879976235</CustomerPO>
+      <ThirdPartyFreightAccount/>
+      <ShipToAddress1>TROY MARTIN</ShipToAddress1>
+      <ShipToAddress2>106 KEYSTONE LANE</ShipToAddress2>
+      <ShipToAddress3>(+1 07807392000)</ShipToAddress3>
+      <ShipToCity>LEDUC</ShipToCity>
+      <ShipToProvince>AB</ShipToProvince>
+      <ShipToPostalCode>T9E0J4</ShipToPostalCode>
+      <AddressErrorMessage AddressErrorType=""/>
+      <ContractNumber/>
+      <OrderSuffix Suffix="11">
+        <DistributionWeight>2</DistributionWeight>
+        <SuffixErrorResponse SuffixErrorType=""/>
+        <Carrier CarrierCode="PI">PUROLATOR GROUND</Carrier>
+        <LineInformation>
+          <ProductLine>
+            <LineError/>
+            <SKU>5161UD</SKU>
+            <ManufacturerPartNumber>PH12</ManufacturerPartNumber>
+            <UPC>0731304335948</UPC>
+            <UnitPrice>24.02</UnitPrice>
+            <IngramLineNumber>001</IngramLineNumber>
+            <CustomerLineNumber>0</CustomerLineNumber>
+            <ShipFromBranch>10</ShipFromBranch>
+            <OrderQuantity>1</OrderQuantity>
+            <AllocatedQuantity>1</AllocatedQuantity>
+            <BackOrderedQuantity>0</BackOrderedQuantity>
+            <BackOrderETADate/>
+            <PriceDerivedFlag/>
+            <ForeignCurrency>0.00</ForeignCurrency>
+            <FreightRate>0.00</FreightRate>
+            <TransitDays>2</TransitDays>
+            <LineBillToSuffix>000</LineBillToSuffix>
+          </ProductLine>
+        </LineInformation>
+      </OrderSuffix>
+    </OrderNumbers>
+  </OrderInfo>
+</OrderResponse>

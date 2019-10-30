@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<OrderRequest>
+  <Version>2.0</Version>
+  <TransactionHeader>
+    <SenderID/>
+    <ReceiverID/>
+    <CountryCode>FT</CountryCode>
+    <LoginID>TreV8Efbfe</LoginID>
+    <Password>FVnxb28501</Password>
+    <TransactionID/>
+  </TransactionHeader>
+  <OrderHeaderInformation>
+    <BillToSuffix/>
+    <AddressingInformation>
+      <CustomerPO>70270572879976235</CustomerPO>
+      <ShipToAttention/>
+      <EndUserPO>70270572879976235</EndUserPO>
+      <ShipTo>
+        <Address>
+          <ShipToAddress1>Troy Martin</ShipToAddress1>
+          <ShipToAddress2>106 Keystone Lane</ShipToAddress2>
+          <ShipToAddress3>(+1 07807392000)</ShipToAddress3>
+          <ShipToCity>Leduc</ShipToCity>
+          <ShipToProvince>AB</ShipToProvince>
+          <ShipToPostalCode>T9E 0J4</ShipToPostalCode>
+        </Address>
+      </ShipTo>
+    </AddressingInformation>
+    <ProcessingOptions>
+      <CarrierCode>PI</CarrierCode>
+      <AutoRelease>H</AutoRelease>
+      <ShipmentOptions>
+        <BackOrderFlag>Y</BackOrderFlag>
+        <SplitShipmentFlag>N</SplitShipmentFlag>
+        <SplitLine>N</SplitLine>
+        <ShipFromBranches>10</ShipFromBranches>
+        <DeliveryDate/>
+      </ShipmentOptions>
+    </ProcessingOptions>
+    <DynamicMessage>
+      <MessageLines/>
+    </DynamicMessage>
+  </OrderHeaderInformation>
+  <OrderLineInformation>
+    <ProductLine>
+      <SKU>5161UD</SKU>
+      <Quantity>1</Quantity>
+      <CustomerLineNumber/>
+    </ProductLine>
+    <CommentLine>
+      <CommentText/>
+    </CommentLine>
+  </OrderLineInformation>
+  <ShowDetail>2</ShowDetail>
+</OrderRequest>

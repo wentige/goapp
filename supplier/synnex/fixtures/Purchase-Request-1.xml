@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SynnexB2B>
+  <Credential>
+    <UserID>tom@betanade.com</UserID>
+    <Password>betSyn!2O19053O</Password>
+  </Credential>
+  <OrderRequest>
+    <CustomerNumber>1150897</CustomerNumber>
+    <PONumber>702-6452671-8794631</PONumber>
+    <DropShipFlag>Y</DropShipFlag>
+    <Shipment>
+      <ShipFromWarehouse>57</ShipFromWarehouse>
+      <ShipTo>
+        <AddressName1>Lisa Wall</AddressName1>
+        <AddressLine1>8 Esterbrooke Ave. TH 23</AddressLine1>
+        <AddressLine2/>
+        <City>Toronto</City>
+        <State>ON</State>
+        <ZipCode>M2J 2C2</ZipCode>
+        <Country>CA</Country>
+      </ShipTo>
+      <ShipToContact>
+        <ContactName>Lisa Wall</ContactName>
+        <PhoneNumber>416 8459399</PhoneNumber>
+        <EmailAddress>pp9qvc9r3gllqv2@marketplace.amazon.ca</EmailAddress>
+      </ShipToContact>
+      <ShipMethod>
+        <Code>PUX</Code>
+      </ShipMethod>
+    </Shipment>
+    <Items>
+      <Item lineNumber="1">
+        <SKU>6160176</SKU>
+        <UnitPrice>61.10</UnitPrice>
+        <OrderQuantity>1</OrderQuantity>
+      </Item>
+    </Items>
+  </OrderRequest>
+</SynnexB2B>

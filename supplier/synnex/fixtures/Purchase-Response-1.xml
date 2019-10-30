@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SynnexB2B>
+  <OrderResponse>
+    <CustomerNumber>1150897</CustomerNumber>
+    <PONumber>702-6452671-8794631</PONumber>
+    <Code>accepted</Code>
+    <ResponseDateTime>2019-10-29T08:26:50</ResponseDateTime>
+    <ResponseElapsedTime>0.802s</ResponseElapsedTime>
+    <Items>
+      <Item lineNumber="1">
+        <SKU>6160176</SKU>
+        <OrderQuantity>1</OrderQuantity>
+        <Code>accepted</Code>
+        <OrderNumber>27169270</OrderNumber>
+        <OrderType>99</OrderType>
+        <ShipFromWarehouse/>
+        <SynnexInternalReference>OKNOACPOP,A-SALESPND---CONVERTOK,A-SALESPND</SynnexInternalReference>
+      </Item>
+    </Items>
+  </OrderResponse>
+</SynnexB2B>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ASIOrderRequest custid="75692" custpo="W-1572350427-AS" cert="1FN9RYH3GNDH5OM">
+  <header>
+    <shipto>
+      <name>Roy Zhang</name>
+      <address1>133 McPherson Street</address1>
+      <address2/>
+      <address3>647-400-9097</address3>
+      <city>Markham</city>
+      <state>ON</state>
+      <zip>L3R 3L3</zip>
+      <country>CA</country>
+    </shipto>
+    <shipinfo>
+      <via>PGD</via>
+      <instructions>Please HOLD</instructions>
+    </shipinfo>
+  </header>
+  <detail>
+    <line>
+      <sku>228303</sku>
+      <qty>1</qty>
+      <price>538.23</price>
+      <branch>3116</branch>
+    </line>
+  </detail>
+</ASIOrderRequest>

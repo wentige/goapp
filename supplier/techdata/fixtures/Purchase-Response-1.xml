@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE XML_Order_Response SYSTEM "XML_Order_Response.dtd">
+<XML_Order_Response>
+  <Header>
+    <UserName>567861</UserName>
+    <TransSetIDCode>855</TransSetIDCode>
+    <TransControlID/>
+    <ResponseVersion>1.6</ResponseVersion>
+    <PurposeCode/>
+    <PONbr>701-0093022-1599463</PONbr>
+    <RefID>1315253</RefID>
+  </Header>
+  <Summary/>
+</XML_Order_Response>
