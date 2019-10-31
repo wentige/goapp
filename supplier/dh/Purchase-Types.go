@@ -40,4 +40,5 @@ type XmlOrderResponse struct {
 	XMLName  xml.Name `xml:"XMLRESPONSE"`
 	OrderNum string   `xml:"ORDERNUM"`
 	Status   string   `xml:"STATUS"`
+	Message  string   `xml:"MESSAGE"`
 }
