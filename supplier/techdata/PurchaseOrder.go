@@ -47,7 +47,7 @@ func (self PurchaseOrder) SendRequest(url string, body []byte) ([]byte, error) {
 	return self.client.SendRequest("POST", url, body)
 }
 
-func (self PurchaseOrder) ToPurchaseResult(x *ASIInventory) *model.PurchaseResult {
+func (self PurchaseOrder) ToPurchaseResult(x *XMLOrderResponse) *model.PurchaseResult {
 	r := &model.PurchaseResult{}
 	return r
 }

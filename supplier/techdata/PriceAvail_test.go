@@ -2,15 +2,12 @@ package techdata
 
 import (
 	"encoding/xml"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
-
-var pr = fmt.Println
 
 func Test_PA_Request(t *testing.T) {
 	assert := assert.New(t)
@@ -45,7 +42,7 @@ func Test_PA_Response(t *testing.T) {
 	assert := assert.New(t)
 
 	filename := "fixtures/PriceAvail-Response-1.xml"
-	data := getXML(filename)
+	data := getPAXML(filename)
 
 	var x XMLPriceAvailResponse
 
@@ -79,13 +76,26 @@ func Test_PA_Response(t *testing.T) {
 }
 
 func Test_PA_Errors(t *testing.T) {
+	assert := assert.New(t)
+
+	filename := "fixtures/PriceAvail-Response-Error-1.xml"
+	data := getPOXML(filename)
+
+	var x XMLPriceAvailResponse
+
+	err := xml.Unmarshal(data, &x)
+	assert.Nil(err)
+
+	assert.Equal(x.Detail.LineInfo[0].ErrorInfo.ErrorDesc, "The required UserName tag is either blank or missing")
+	assert.Equal(x.Detail.LineInfo[0].ErrorInfo.RefIDQual3, "1Q")
+	assert.Equal(x.Detail.LineInfo[0].ErrorInfo.RefID3, "0")
 }
 
 func Test_GetPriceAvail(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("TD_USER")
 	client.Password = os.Getenv("TD_PASS")
-	client.GetPriceAvail([]string{"TD-0705XT", "TD-5665BX"})
+	//client.GetPriceAvail([]string{"TD-0705XT", "TD-5665BX"})
 }
 
 func getPAXML(filename string) []byte {

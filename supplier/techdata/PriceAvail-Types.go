@@ -41,6 +41,12 @@ type Warehouse struct {
 	Qty  string `xml:"Qty"`
 }
 
+type ErrorInfo struct {
+	RefIDQual3 string `xml:"RefIDQual3"`
+	RefID3     string `xml:"RefID3"`
+	ErrorDesc  string `xml:"ErrorDesc"`
+}
+
 type ResponseLineInfo struct {
 	RefIDQual1    string      `xml:"RefIDQual1"`
 	RefID1        string      `xml:"RefID1"`
@@ -58,6 +64,7 @@ type ResponseLineInfo struct {
 	ProductWeight string      `xml:"ProductWeight"`
 	ItemStatus    string      `xml:"ItemStatus"`
 	Warehouses    []Warehouse `xml:"WhseInfo"`
+	ErrorInfo     ErrorInfo   `xml:"ErrorInfo"`
 }
 
 type ResponseDetail struct {
