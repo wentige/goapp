@@ -76,7 +76,7 @@ func Test_GetPriceAvail(t *testing.T) {
 	client.CustomerNo = os.Getenv("SYN_CUST")
 	client.Username = os.Getenv("SYN_USER")
 	client.Password = os.Getenv("SYN_PASS")
-	client.GetPriceAvail([]string{"SYN-6024136", "SYN-4907081"})
+	//client.GetPriceAvail([]string{"SYN-6024136", "SYN-4907081"})
 }
 
 func getPAXML(filename string) []byte {
