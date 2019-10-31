@@ -78,13 +78,27 @@ func Test_PA_Response(t *testing.T) {
 }
 
 func Test_PA_Errors(t *testing.T) {
+	assert := assert.New(t)
+
+	filename := "fixtures/PriceAvail-Response-Error-1.xml"
+	data := getPAXML(filename)
+
+	var x PNAResponse
+
+	err := xml.Unmarshal(data, &x)
+	assert.Nil(err)
+
+	assert.Equal(x.Header.SenderID, "YOU")
+	assert.Equal(x.Header.ReceiverID, "ME")
+	assert.Equal(x.Header.ErrorStatus.ErrorNumber, "NA")
+	assert.Equal(x.Header.ErrorStatus.Text, "LoginID, or Password or CountryCode is Missing")
 }
 
 func Test_GetPriceAvail(t *testing.T) {
 	client := &Client{}
 	client.Username = os.Getenv("ING_USER")
 	client.Password = os.Getenv("ING_PASS")
-	client.GetPriceAvail([]string{"ING-8059YD", "ING-9932DS"})
+	//client.GetPriceAvail([]string{"ING-8059YD", "ING-9932DS"})
 }
 
 func getPAXML(filename string) []byte {

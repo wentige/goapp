@@ -55,6 +55,7 @@ type Item struct {
 }
 
 type ErrorStatus struct {
+	Text        string `xml:",chardata"`
 	ErrorNumber string `xml:"ErrorNumber,attr"`
 }
 

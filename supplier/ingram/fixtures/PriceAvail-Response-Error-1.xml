@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PNAResponse>
+  <Version>2.0</Version>
+  <TransactionHeader>
+    <SenderID>YOU</SenderID>
+    <ReceiverID>ME</ReceiverID>
+    <ErrorStatus ErrorNumber="NA">LoginID, or Password or CountryCode is Missing</ErrorStatus>
+    <DocumentID>720d1441-fb86-11e9-a320-2e470a0c4240</DocumentID>
+    <TransactionID>1</TransactionID>
+    <TimeStamp>2019-10-30T19:30:46</TimeStamp>
+  </TransactionHeader>
+</PNAResponse>

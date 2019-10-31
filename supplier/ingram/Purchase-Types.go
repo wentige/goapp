@@ -65,6 +65,7 @@ type OrderResponse struct {
 		SenderID    string `xml:"SenderID"`
 		ReceiverID  string `xml:"ReceiverID"`
 		ErrorStatus struct {
+			Text        string `xml:",chardata"`
 			ErrorNumber string `xml:"ErrorNumber,attr"`
 		} `xml:"ErrorStatus"`
 		DocumentID    string `xml:"DocumentID"`
