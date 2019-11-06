@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:errors
+    xmlns:ns2="http://walmart.com/mp/orders"
+    xmlns:ns3="http://walmart.com/mp/v3/orders"
+    xmlns:ns4="http://walmart.com/">
+  <ns4:error>
+    <ns4:code>INVALID_REQUEST_CONTENT.GMP_ORDER_API</ns4:code>
+    <ns4:field>data</ns4:field>
+    <ns4:description>Unable to process this request. The Line: 1 of PO: Y12613640 does not exist</ns4:description>
+    <ns4:info>Request content is invalid.</ns4:info>
+    <ns4:severity>ERROR</ns4:severity>
+    <ns4:category>DATA</ns4:category>
+    <ns4:causes/>
+    <ns4:errorIdentifiers/>
+  </ns4:error>
+</ns4:errors>
