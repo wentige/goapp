@@ -1,0 +1,77 @@
+<GetFulfillmentOrderResponse xmlns="http://mws.amazonaws.com/FulfillmentOutboundShipment/2010-10-01/">
+  <GetFulfillmentOrderResult>
+    <FulfillmentShipment>
+      <member>
+        <AmazonShipmentId>DJn9RnQgN</AmazonShipmentId>
+        <EstimatedArrivalDateTime>2016-12-07T07:59:59Z</EstimatedArrivalDateTime>
+        <FulfillmentCenterId>YVR2</FulfillmentCenterId>
+        <FulfillmentShipmentStatus>SHIPPED</FulfillmentShipmentStatus>
+        <FulfillmentShipmentPackage>
+          <member>
+            <EstimatedArrivalDateTime>2016-12-09T04:00:00Z</EstimatedArrivalDateTime>
+            <TrackingNumber>TBC001903866009</TrackingNumber>
+            <CarrierCode>AMZN</CarrierCode>
+            <PackageNumber>162319635</PackageNumber>
+          </member>
+        </FulfillmentShipmentPackage>
+        <FulfillmentShipmentItem>
+          <member>
+            <SellerFulfillmentOrderItemId>d/s-702-6975252-7916262-0</SellerFulfillmentOrderItemId>
+            <Quantity>1</Quantity>
+            <SellerSKU>BTE-FBA-BX80646I54690K</SellerSKU>
+            <PackageNumber>162319635</PackageNumber>
+          </member>
+        </FulfillmentShipmentItem>
+        <ShippingDateTime>2016-12-07T06:11:45Z</ShippingDateTime>
+      </member>
+    </FulfillmentShipment>
+    <ReturnItemList/>
+    <ReturnAuthorizationList/>
+    <FulfillmentOrder>
+      <SellerFulfillmentOrderId>d/s-702-6975252-7916262</SellerFulfillmentOrderId>
+      <DestinationAddress>
+        <PhoneNumber>(604) 534 6154</PhoneNumber>
+        <City>Langley</City>
+        <CountryCode>CA</CountryCode>
+        <PostalCode>V2Y 1J6</PostalCode>
+        <Name>David Hennessy</Name>
+        <StateOrProvinceCode>BC</StateOrProvinceCode>
+        <Line3/>
+        <Line2/>
+        <DistrictOrCounty/>
+        <Line1>6744 196b Place</Line1>
+      </DestinationAddress>
+      <DisplayableOrderDateTime>2016-11-29T08:00:00Z</DisplayableOrderDateTime>
+      <ShippingSpeedCategory>Standard</ShippingSpeedCategory>
+      <FulfillmentMethod>Consumer</FulfillmentMethod>
+      <FulfillmentOrderStatus>COMPLETE</FulfillmentOrderStatus>
+      <FulfillmentPolicy>FillOrKill</FulfillmentPolicy>
+      <StatusUpdatedDateTime>2016-12-07T06:14:05Z</StatusUpdatedDateTime>
+      <MarketplaceId>A2EUQ1WTGCTBG2</MarketplaceId>
+      <ReceivedDateTime>2016-11-29T18:40:31Z</ReceivedDateTime>
+      <FulfillmentAction>Ship</FulfillmentAction>
+      <DisplayableOrderId>d/s-702-6975252-7916262</DisplayableOrderId>
+      <DisplayableOrderComment>Thank you for your order!</DisplayableOrderComment>
+    </FulfillmentOrder>
+    <FulfillmentOrderItem>
+      <member>
+        <OrderItemDisposition>Sellable</OrderItemDisposition>
+        <PerUnitDeclaredValue>
+          <CurrencyCode>CAD</CurrencyCode>
+          <Value>310.06</Value>
+        </PerUnitDeclaredValue>
+        <EstimatedShipDateTime>2016-12-06T07:59:59Z</EstimatedShipDateTime>
+        <Quantity>1</Quantity>
+        <CancelledQuantity>0</CancelledQuantity>
+        <SellerFulfillmentOrderItemId>d/s-702-6975252-7916262-0</SellerFulfillmentOrderItemId>
+        <EstimatedArrivalDateTime>2016-12-07T07:59:59Z</EstimatedArrivalDateTime>
+        <UnfulfillableQuantity>0</UnfulfillableQuantity>
+        <FulfillmentNetworkSKU>B00KPRWB9G</FulfillmentNetworkSKU>
+        <SellerSKU>BTE-FBA-BX80646I54690K</SellerSKU>
+      </member>
+    </FulfillmentOrderItem>
+  </GetFulfillmentOrderResult>
+  <ResponseMetadata>
+    <RequestId>b9875722-2f4f-47c6-bbaa-8a57be17d77b</RequestId>
+  </ResponseMetadata>
+</GetFulfillmentOrderResponse>
