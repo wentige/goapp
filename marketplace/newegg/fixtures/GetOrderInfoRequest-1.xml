@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NeweggAPIRequest>
+  <OperationType>GetOrderInfoRequest</OperationType>
+  <RequestBody>
+    <PageIndex>1</PageIndex>
+    <PageSize>100</PageSize>
+    <RequestCriteria>
+      <OrderNumberList>
+        <OrderNumber>Order-ID-1</OrderNumber>
+        <OrderNumber>Order-ID-2</OrderNumber>
+      </OrderNumberList>
+    </RequestCriteria>
+  </RequestBody>
+</NeweggAPIRequest>
